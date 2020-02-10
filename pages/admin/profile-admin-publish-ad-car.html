@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Perfil | Carros y Casas</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src="https://kit.fontawesome.com/9aa0e1d6d6.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+	<header>
+		<nav class="navbar is-transparent">
+			<div id="topbar">
+			 	<div class="navbar-brand">
+			    	<a class="navbar-item" href="/">
+				    	<img src="/img/innovacode_wt.png" alt="Empresas JNA.com">
+				    </a>
+				    <div class="navbar-burger burger" data-target="main-navbar">
+				    	<span></span>
+				    	<span></span>
+				    	<span></span>
+				    </div>
+				</div>
+				<div class="topbar-menu">
+					<div class="navbar-end">
+				    	<a class="navbar-item" href="/pages/sale.html">Vender</a>
+				    	<a class="navbar-item" href="/pages/login-register.html">Ingresar</a>
+					</div>
+				</div>
+			</div>
+
+			<div id="main-navbar" class="navbar-menu">
+		    	<div class="navbar-center">
+			    	<a class="navbar-item" href="/">Portada</a>
+		      		<a class="navbar-item" href="/pages/cars.html">Vehiculos</a>
+		         	<a class="navbar-item" href="/pages/real-estate.html">Propiedades</a>
+				    <div class="navbar-item has-dropdown is-hoverable">
+		        		<a class="navbar-link" href="/pages/companies.html">Empresas</a>
+				        <div class="navbar-dropdown is-boxed">
+				         	<a class="navbar-item" href="/pages/companies/dealers.html">Dealers</a>
+				         	<a class="navbar-item" href="/pages/companies/real-estate.html">Inmobiliarias</a>
+				         	<a class="navbar-item" href="/pages/companies/motor.html">Motoprestamos</a>
+				         	<a class="navbar-item" href="/pages/companies/ships.html">Navieras</a>
+				        </div>
+				    </div>
+			    	<a class="navbar-item" href="/pages/contacto.html">Contacto</a>
+		    	</div>
+			</div>
+		</nav>
+	</header>
+	<div id="wrapper">
+		<div id="profile-content">
+			<div class="columns">
+				<aside id="profile-admin-sidebar" class="column is-12-mobile is-3-desktop profile-sidebar admin-sidebar">
+					<div class="profile-box">
+						<div class="profile-header">
+							<p class="code-id">Código No.: 0001</p>
+							<figure class="profile-img">
+								<img src="/img/profile-img.jpg" alt="Profile Image">
+								<figcaption>Persona</figcaption>
+							</figure>
+							<h3>Irene Mendez</h3>
+						</div>
+						<div class="box-buttons">
+							<a class="button is-primary outline" href="#">Publicar Articulo</a>
+							<a class="button is-primary outline" href="/pages/admin/profile-admin-online-ads.html">Articulos Disponibles</a>
+							<a class="button is-primary outline" href="/pages/admin/profile-admin-sold-ads.html">Articulos Vendidos</a>
+							<a class="button is-primary outline" href="#">Mensajes Entrantes</a>
+							<a class="button is-primary outline" href="/pages/admin/profile-admin-edit.html">Editar Inf. General</a>
+						</div>
+					</div>
+					<div class="change-role">
+						<h4>¿Eres propietario de una empresa?</h4>
+						<p>Regístrala gratis y haz que tu marca e inventario lleguen mas lejos y a mas personas de una forma rápida, segura y sencilla.</p>
+						<a href="/pages/sale.html" class="button is-second">Registrarme</a>
+					</div>
+				</aside>
+				<div id="form-publish" class="column form-content">
+					<ul class="tabs-lists">
+	        			<li class="tab-link">
+	        				<a href="#" @click="activetab=1":class="[ activetab === 1 ? 'active' : '' ]">
+	        					Información Básica
+	        				</a>
+	        			</li>
+	        			<li class="tab-link">
+	        				<a href="#" @click="activetab=2" :class="[ activetab === 2 ? 'active' : '' ]">
+	        					Características
+	        				</a>
+	        			</li>
+	        			<li class="tab-link">
+	        				<a href="#" @click="activetab=3":class="[ activetab === 3 ? 'active' : '' ]">
+	        					Fotos
+	        				</a>
+	        			</li>
+	        			<li class="tab-link">
+	        				<a href="#" @click="activetab=4" :class="[ activetab === 4 ? 'active' : '' ]">
+	        					Dirección y Publicar
+	        				</a>
+	        			</li>
+	        		</ul>
+	        		<div class="tabs-content">
+		        		<transition-group name="fade-left">
+		        			<div action="" key="1" class="" v-if="activetab === 1">
+		        				<form action="" class="form-detail">
+		        					<div class="field">
+										<label class="label" for="name">Estado</label>
+										<div class="select">
+									    	<select>
+									    		<option>Venta</option>
+									    		<option>Rente</option>
+									    		<option>Venta y Alquiler</option>
+										    </select>
+										</div>
+									</div>
+									<div class="double-field">
+										<div class="field">
+											<label class="label" for="name">Año</label>
+											<div class="control">
+										    	<input class="input" id="name" type="text" placeholder="Año">
+											</div>
+										</div>
+										<div class="field">
+											<label class="label" for="name">Cilindros</label>
+											<div class="control">
+										    	<input class="input" id="name" type="text" placeholder="Cilindros">
+											</div>
+										</div>
+									</div>
+									<div class="field">
+										<label class="label" for="name">Tipo</label>
+										<div class="select">
+									    	<select>
+									    		<option>Venta</option>
+									    		<option>Rente</option>
+									    		<option>Venta y Alquiler</option>
+										    </select>
+										</div>
+									</div>
+									<div class="field">
+										<label class="label" for="name">Tracción</label>
+										<div class="select">
+									    	<select>
+									    		<option>Venta</option>
+									    		<option>Rente</option>
+									    		<option>Venta y Alquiler</option>
+										    </select>
+										</div>
+									</div>
+									<div class="field">
+										<label class="label" for="name">Marca</label>
+										<div class="select">
+									    	<select>
+									    		<option>Venta</option>
+									    		<option>Rente</option>
+									    		<option>Venta y Alquiler</option>
+										    </select>
+										</div>
+									</div>
+									<div class="field">
+										<label class="label" for="name">Combustible</label>
+										<div class="select">
+									    	<select>
+									    		<option>Venta</option>
+									    		<option>Rente</option>
+									    		<option>Venta y Alquiler</option>
+										    </select>
+										</div>
+									</div>
+									<div class="field">
+										<label class="label" for="name">Modelo</label>
+										<div class="select">
+									    	<select>
+									    		<option>Venta</option>
+									    		<option>Rente</option>
+									    		<option>Venta y Alquiler</option>
+										    </select>
+										</div>
+									</div>
+									<div class="field">
+										<label class="label" for="name">Versión</label>
+										<div class="select">
+									    	<select>
+									    		<option>Venta</option>
+									    		<option>Rente</option>
+									    		<option>Venta y Alquiler</option>
+										    </select>
+										</div>
+									</div>
+									<div class="field">
+										<label class="label" for="name">Color Exterior</label>
+										<div class="select">
+									    	<select>
+									    		<option>Venta</option>
+									    		<option>Rente</option>
+									    		<option>Venta y Alquiler</option>
+										    </select>
+										</div>
+									</div>
+									<div class="field">
+										<label class="label" for="name">Color Interior</label>
+										<div class="select">
+									    	<select>
+									    		<option>Venta</option>
+									    		<option>Rente</option>
+									    		<option>Venta y Alquiler</option>
+										    </select>
+										</div>
+									</div>
+									<div class="field">
+										<label class="label" for="name">Condición</label>
+										<div class="select">
+									    	<select>
+									    		<option>Venta</option>
+									    		<option>Rente</option>
+									    		<option>Venta y Alquiler</option>
+										    </select>
+										</div>
+									</div>
+									<div class="double-field">
+										<div class="field">
+											<label class="label" for="name">Puertas</label>
+											<div class="control">
+										    	<input class="input" id="name" type="text" placeholder="Año">
+											</div>
+										</div>
+										<div class="field">
+											<label class="label" for="name">Pasajeros</label>
+											<div class="control">
+										    	<input class="input" id="name" type="text" placeholder="Cilindros">
+											</div>
+										</div>
+									</div>
+									<div class="field">
+										<label class="label" for="name">Tamaño de Motor</label>
+										<div class="control">
+									    	<input class="input" id="name" type="text" placeholder="Ejemplo: 2000cc 4.9">
+										</div>
+									</div>
+									<div class="field price-field">
+										<label class="label" for="name">Precio</label>
+										<div class="control">
+											<select class="currency" name="" id="">
+												<option value="">RD$</option>
+												<option value="">US$</option>
+											</select>
+									    	<input class="input" id="price" type="text" placeholder="Año">
+										</div>
+									</div>
+									<div class="field">
+										<label class="label" for="name">Transmisión</label>
+										<div class="control">
+									    	<input class="input" id="name" type="text" placeholder="Año">
+										</div>
+									</div>
+									<div class="field">
+										<label class="label" for="name">Financiamiento Disponible</label>
+										<div class="control">
+										    <label class="radio">
+										    	<input type="radio" name="finance">
+										    	Si
+										    </label>
+										    <label class="radio">
+										    	<input type="radio" name="finance" checked>
+										    	No
+										    </label>
+										</div>
+									</div>
+									<div class="field">
+										<label class="label" for="name">Kilometraje</label>
+										<div class="control">
+									    	<input class="input" id="name" type="text" placeholder="0">
+										</div>
+									</div>
+									
+									<div class="field-description">
+										<label class="label">Descripción o comentario</label>
+										<div class="control">
+										    <textarea class="textarea" placeholder="Escribe una descripción o comentario sobre el articulo al subir..."></textarea>
+										</div>
+									</div>
+		        				</form>
+		        			</div>
+		        			<div key="2" action="" class="" v-if="activetab === 2">
+		        				<form action="" class="feature">
+		        					<div class="security">
+		        						<h3>Seguridad</h3>
+		        						<div class="security-checkboxes">
+		        							<div class="check-content">
+									    		<input id="alarm" class="alarm" type="checkbox">
+			        							<label class="checkbox" for="alarm">
+										    		Alarma
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="secure-electric" class="secure-electric" type="checkbox">
+			        							<label class="checkbox" for="secure-electric">
+										    		Seguro Eléctrico
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="engine-immobilizer" class="engine-immobilizer" type="checkbox">
+			        							<label class="checkbox" for="engine-immobilizer">
+										    		Inmovilizador de motor
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="fuel-cut" class="fuel-cut" type="checkbox">
+			        							<label class="checkbox" for="fuel-cut">
+										    		Corte inercial de combustible
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="brakes-hidra" class="brakes-hidra" type="checkbox">
+			        							<label class="checkbox" for="brakes-hidra">
+										    		Frenos Hidraulicos
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="lights-xenon" class="lights-xenon" type="checkbox">
+			        							<label class="checkbox" for="lights-xenon">
+										    		Luces Bixenon
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="brake-third" class="brake-third" type="checkbox">
+			        							<label class="checkbox" for="brake-third">
+										    		Tercera Luz de Freno
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="lights-halo" class="lights-halo" type="checkbox">
+			        							<label class="checkbox" for="lights-halo">
+										    		Faros de halógeno / xenón
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="brake-abs" class="brake-abs" type="checkbox">
+			        							<label class="checkbox" for="brake-abs">
+										    		Frenos ABS
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="lights-led" class="lights-led" type="checkbox">
+			        							<label class="checkbox" for="lights-led">
+										    		Luces LED
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="air-bag-driver" class="air-bag-driver" type="checkbox">
+			        							<label class="checkbox" for="air-bag-driver">
+										    		Bolsa de aire (chofer)
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="air-bag-cop" class="air-bag-cop" type="checkbox">
+			        							<label class="checkbox" for="air-bag-cop">
+										    		Bolsa de aire (pasajero)
+										    	</label>
+		        							</div>
+		        						</div>
+		        					</div>
+		        					<div class="confort">
+		        						<h3>Confort</h3>
+		        						<div class="security-checkboxes">
+		        							<div class="check-content">
+									    		<input id="smart-key" class="smart-key" type="checkbox">
+			        							<label class="checkbox" for="smart-key">
+										    		Llave Inteligente
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="electric-seats" class="electric-seats" type="checkbox">
+			        							<label class="checkbox" for="electric-seats">
+										    		Asientos eléctricos
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="electric-side-mirror" class="electric-side-mirror" type="checkbox">
+			        							<label class="checkbox" for="electric-side-mirror">
+										    		Retrovisores eléctricos
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="air-conditioner" class="air-conditioner" type="checkbox">
+			        							<label class="checkbox" for="air-conditioner">
+										    		Aire acondicionado
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="turnon-btn" class="turnon-btn" type="checkbox">
+			        							<label class="checkbox" for="turnon-btn">
+										    		Encendido por botón
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="sunroof" class="sunroof" type="checkbox">
+			        							<label class="checkbox" for="sunroof">
+										    		Sunroof
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="cruise-control" class="cruise-control" type="checkbox">
+			        							<label class="checkbox" for="cruise-control">
+										    		Cruise Control
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="electric-trunk" class="electric-trunk" type="checkbox">
+			        							<label class="checkbox" for="electric-trunk">
+										    		Baúl eléctrico
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="syste-nav" class="syste-nav" type="checkbox">
+			        							<label class="checkbox" for="syste-nav">
+										    		Sistema de navegación
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="reverse-camera" class="reverse-camera" type="checkbox">
+			        							<label class="checkbox" for="reverse-camera">
+										    		Cámara de reversa
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="lether-seat" class="lether-seat" type="checkbox">
+			        							<label class="checkbox" for="lether-seat">
+										    		Tapicería de piel
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="suspension-back" class="suspension-back" type="checkbox">
+			        							<label class="checkbox" for="suspension-back">
+										    		Suspensión trasera
+										    	</label>
+		        							</div>
+		        						</div>
+		        					</div>
+		        					<div class="audio">
+		        						<h3>Audio</h3>
+		        						<div class="security-checkboxes">
+		        							<div class="check-content">
+									    		<input id="mp3-usb" class="mp3-usb" type="checkbox">
+			        							<label class="checkbox" for="mp3-usb">
+										    		MP3 USB
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="bluetooth" class="bluetooth" type="checkbox">
+			        							<label class="checkbox" for="bluetooth">
+										    		Bluetooth
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="radio" class="radio" type="checkbox">
+			        							<label class="checkbox" for="radio">
+										    		Radio AM / FM
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="usb-connect" class="usb-connect" type="checkbox">
+			        							<label class="checkbox" for="usb-connect">
+										    		Conector USB
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="cd-player" class="cd-player" type="checkbox">
+			        							<label class="checkbox" for="cd-player">
+										    		CD player
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="root-antenna" class="root-antenna" type="checkbox">
+			        							<label class="checkbox" for="root-antenna">
+										    		Antena de Techo
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="dvd-display" class="dvd-display" type="checkbox">
+			        							<label class="checkbox" for="dvd-display">
+										    		Pantalla DVD
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="cd-box" class="cd-box" type="checkbox">
+			        							<label class="checkbox" for="cd-box">
+										    		CD Box
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="tactil-screen" class="tactil-screen" type="checkbox">
+			        							<label class="checkbox" for="tactil-screen">
+										    		Pantalla táctil
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="professional-audio" class="professional-audio" type="checkbox">
+			        							<label class="checkbox" for="professional-audio">
+										    		Sonido profesional
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="sd-card" class="sd-card" type="checkbox">
+			        							<label class="checkbox" for="sd-card">
+										    		Tarjesa SD
+										    	</label>
+		        							</div>
+		        						</div>
+		        					</div>
+		        					<div class="other-features">
+		        						<h5>Para añadir una característica adicional, llene el campo debajo y haga click en el botón añadir.</h5>
+		        						<div class="new-feature">
+			        						<div class="field">
+												<label class="label" for="new">Característica</label>
+												<div class="control">
+											    	<input class="input" id="new" type="text" placeholder="Nueva característica">
+												</div>
+												<a class="button is-primary" href="#">
+													Añadir
+												</a>
+											</div>
+		        							<div class="feature-list">
+		        								<ul>
+		        									<li>
+			        									Luces LED Traseras
+			        									<a class="delete-feture" href="#"><i class="fas fa-times"></i></a>
+			        								</li>
+			        								<li>
+			        									Luces LED Traseras
+			        									<a class="delete-feture" href="#"><i class="fas fa-times"></i></a>
+			        								</li>
+			        								<li>
+			        									Luces LED Traseras
+			        									<a class="delete-feture" href="#"><i class="fas fa-times"></i></a>
+			        								</li>
+			        								<li>
+			        									Luces LED Traseras
+			        									<a class="delete-feture" href="#"><i class="fas fa-times"></i></a>
+			        								</li>
+			        								<li>
+			        									Luces LED Traseras
+			        									<a class="delete-feture" href="#"><i class="fas fa-times"></i></a>
+			        								</li>
+		        								</ul>
+		        							</div>
+		        						</div>
+		        					</div>
+		        				</form>
+		        			</div>
+		        			<div key="3" action="" class="" v-if="activetab === 3">
+		        				<h2>Tab3</h2>
+		        			</div>
+		        			<div key="4" action="" class="" v-if="activetab === 4">
+		        				<form class="pubish-direction" action="">
+		        					<div class="fields">
+		        						<div class="field">
+											<label class="label">País</label>
+											<div class="select">
+										    	<select>
+										    		<option>República Dominicana</option>
+											    </select>
+											</div>
+										</div>
+			        					<div class="field">
+											<label class="label" for="name">Provincia</label>
+											<div class="select">
+										    	<select>
+										    		<option>República Dominicana</option>
+											    </select>
+											</div>
+										</div>
+										<div class="field">
+											<label class="label" for="name">Sector</label>
+											<div class="select">
+										    	<select>
+										    		<option>República Dominicana</option>
+											    </select>
+											</div>
+										</div>
+										<div class="field">
+											<label class="label" for="name">Dirección</label>
+											<div class="control">
+										    	<input class="input" id="name" type="text" placeholder="Calle, edificio, #, etc...">
+											</div>
+										</div>
+		        					</div>
+		        					<div class="map">
+		        						<img src="/img/map-example.jpg" alt="">
+		        					</div>
+		        					<button class="button is-primary">
+		        						Publicar Articulo &nbsp;
+		        						<i class="fas fa-plus-circle"></i>
+		        					</button>
+		        				</form>
+		        			</div>
+	        			</transition-group>
+	        		</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer id="main-footer">
+		<div class="container is-fluid footer">
+			<div class="columns">
+				<div class="column">
+					<h3><a href="/">Ir a la Portada</a></h3>
+					<ul>
+						<li>
+							<a class="footer-link" href="#">Políticas del Sitio Web</a>
+						</li>
+						<li>
+							<a class="footer-link" href="#">Términos y Condiciones</a>
+						</li>
+					</ul>
+				</div>
+				<div class="column">
+					<h3>Accesos Rapidos</h3>
+					<ul class="quick-links fa-ul">
+						<li>
+							<span class="fa-li"><i class="fas fa-chevron-right"></i></span>
+							<a href="#" class="item-link">Vehículos</a>
+						</li>
+						<li>
+							<span class="fa-li"><i class="fas fa-chevron-right"></i></span>
+							<a href="#" class="item-link">Inmuebles</a>
+						</li>
+						<li>
+							<span class="fa-li"><i class="fas fa-chevron-right"></i></span>
+							<a href="#" class="item-link">Dealers</a>
+						</li>
+						<li>
+							<span class="fa-li"><i class="fas fa-chevron-right"></i></span>
+							<a href="#" class="item-link">MotoPrestamos</a>
+						</li>
+						<li>
+							<span class="fa-li"><i class="fas fa-chevron-right"></i></span>
+							<a href="#" class="item-link">Inmobiliarias</a>
+						</li>
+						<li>
+							<span class="fa-li"><i class="fas fa-chevron-right"></i></span>
+							<a href="#" class="item-link">RentCars</a>
+						</li>
+						<li>
+							<span class="fa-li"><i class="fas fa-chevron-right"></i></span>
+							<a href="#" class="item-link">Náuticas</a>
+						</li>
+						<li>
+							<span class="fa-li"><i class="fas fa-chevron-right"></i></span>
+							<a href="#" class="item-link">Motoprestamos</a>
+						</li>
+					</ul>
+				</div>
+				<div class="column">
+					<h3><a href="/pages/contacto.html">Detalles de Contacto</a></h3>
+					<ul class="footer-contact fa-ul">
+						<li>
+							<span class="fa-li"><i class="fas fa-phone fa-rotate-90"></i></span>
+							<a href="#" class="item-link">+1 809-000-0000</a>
+						</li>
+						<li>
+							<span class="fa-li"><i class="fas fa-phone fa-rotate-90"></i></span>
+							<a href="#" class="item-link">+1 809-000-0000</a>
+						</li>
+						<li>
+							<span class="fa-li"><i class="fas fa-envelope"></i></span>
+							<a href="mailto:info@empresasjna.com" class="item-link">info@empresasjna.com</a>
+						</li>
+					</ul>
+					<ul class="social-media">
+						<li ><span class="follow-us">Siguenos en: </span></li>
+						<li>
+							<a class="footer-link" href="#">
+								<i class="fab fa-facebook-square"></i>
+							</a>
+						</li>
+						<li>
+							<a class="footer-link" href="#">
+								<i class="fab fa-instagram"></i>
+							</a>
+						</li>
+						<li>
+							<a class="footer-link" href="#">
+								<i class="fab fa-whatsapp"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="copyright-content">
+			<p class="copyright-text">Empresas JNA Copyright © 2020.</p>
+		</div>
+	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script type="text/JavaScript" src="/js/main.js"></script>
+</body>
+</html>

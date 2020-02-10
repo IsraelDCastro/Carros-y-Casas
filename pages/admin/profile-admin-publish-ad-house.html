@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Perfil | Carros y Casas</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src="https://kit.fontawesome.com/9aa0e1d6d6.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+	<header>
+		<nav class="navbar is-transparent">
+			<div id="topbar">
+			 	<div class="navbar-brand">
+			    	<a class="navbar-item" href="/">
+				    	<img src="/img/innovacode_wt.png" alt="Empresas JNA.com">
+				    </a>
+				    <div class="navbar-burger burger" data-target="main-navbar">
+				    	<span></span>
+				    	<span></span>
+				    	<span></span>
+				    </div>
+				</div>
+				<div class="topbar-menu">
+					<div class="navbar-end">
+				    	<a class="navbar-item" href="/pages/sale.html">Vender</a>
+				    	<a class="navbar-item" href="/pages/login-register.html">Ingresar</a>
+					</div>
+				</div>
+			</div>
+
+			<div id="main-navbar" class="navbar-menu">
+		    	<div class="navbar-center">
+			    	<a class="navbar-item" href="/">Portada</a>
+		      		<a class="navbar-item" href="/pages/cars.html">Vehiculos</a>
+		         	<a class="navbar-item" href="/pages/real-estate.html">Propiedades</a>
+				    <div class="navbar-item has-dropdown is-hoverable">
+		        		<a class="navbar-link" href="/pages/companies.html">Empresas</a>
+				        <div class="navbar-dropdown is-boxed">
+				         	<a class="navbar-item" href="/pages/companies/dealers.html">Dealers</a>
+				         	<a class="navbar-item" href="/pages/companies/real-estate.html">Inmobiliarias</a>
+				         	<a class="navbar-item" href="/pages/companies/motor.html">Motoprestamos</a>
+				         	<a class="navbar-item" href="/pages/companies/ships.html">Navieras</a>
+				        </div>
+				    </div>
+			    	<a class="navbar-item" href="/pages/contacto.html">Contacto</a>
+		    	</div>
+			</div>
+		</nav>
+	</header>
+	<div id="wrapper">
+		<div id="profile-content">
+			<div class="columns">
+				<aside id="profile-admin-sidebar" class="column is-12-mobile is-3-desktop profile-sidebar admin-sidebar">
+					<div class="profile-box">
+						<div class="profile-header">
+							<p class="code-id">Código No.: 0001</p>
+							<figure class="profile-img">
+								<img src="/img/profile-img.jpg" alt="Profile Image">
+								<figcaption>Persona</figcaption>
+							</figure>
+							<h3>Irene Mendez</h3>
+						</div>
+						<div class="box-buttons">
+							<a class="button is-primary outline" href="#">Publicar Articulo</a>
+							<a class="button is-primary outline" href="/pages/admin/profile-admin-online-ads.html">Articulos Disponibles</a>
+							<a class="button is-primary outline" href="/pages/admin/profile-admin-sold-ads.html">Articulos Vendidos</a>
+							<a class="button is-primary outline" href="#">Mensajes Entrantes</a>
+							<a class="button is-primary outline" href="/pages/admin/profile-admin-edit.html">Editar Inf. General</a>
+						</div>
+					</div>
+					<div class="change-role">
+						<h4>¿Eres propietario de una empresa?</h4>
+						<p>Regístrala gratis y haz que tu marca e inventario lleguen mas lejos y a mas personas de una forma rápida, segura y sencilla.</p>
+						<a href="/pages/sale.html" class="button is-second">Registrarme</a>
+					</div>
+				</aside>
+				<div id="form-publish" class="column form-content">
+					<ul class="tabs-lists">
+	        			<li class="tab-link">
+	        				<a href="#" @click="activetab=1":class="[ activetab === 1 ? 'active' : '' ]">
+	        					Información Básica
+	        				</a>
+	        			</li>
+	        			<li class="tab-link">
+	        				<a href="#" @click="activetab=2" :class="[ activetab === 2 ? 'active' : '' ]">
+	        					Características
+	        				</a>
+	        			</li>
+	        			<li class="tab-link">
+	        				<a href="#" @click="activetab=3":class="[ activetab === 3 ? 'active' : '' ]">
+	        					Fotos
+	        				</a>
+	        			</li>
+	        			<li class="tab-link">
+	        				<a href="#" @click="activetab=4" :class="[ activetab === 4 ? 'active' : '' ]">
+	        					Dirección y Publicar
+	        				</a>
+	        			</li>
+	        		</ul>
+	        		<div class="tabs-content">
+		        		<transition-group name="fade-left">
+		        			<div action="" key="1" class="" v-if="activetab === 1">
+		        				<form action="" class="form-detail">
+		        					<div class="field">
+										<label class="label" for="name">Estado</label>
+										<div class="select">
+									    	<select>
+									    		<option>Venta</option>
+									    		<option>Rente</option>
+									    		<option>Venta y Alquiler</option>
+										    </select>
+										</div>
+									</div>
+									<div class="field">
+										<label class="label" for="name">Tipo de Casa</label>
+										<div class="select">
+									    	<select>
+									    		<option>Venta</option>
+									    		<option>Rente</option>
+									    		<option>Venta y Alquiler</option>
+										    </select>
+										</div>
+									</div>
+									<div class="field">
+										<label class="label" for="name">Habitaciones</label>
+										<div class="select">
+									    	<select>
+									    		<option value="">1</option>
+									    		<option value="">2</option>
+									    		<option value="">3</option>
+									    		<option value="">4</option>
+									    		<option value="">5</option>
+									    		<option value="">6</option>
+									    		<option value="">7</option>
+									    		<option value="">8</option>
+									    		<option value="">9</option>
+									    		<option value="">10</option>
+									    		<option value="">11</option>
+									    		<option value="">12</option>
+										    </select>
+										</div>
+									</div>
+									<div class="field">
+										<label class="label" for="name">Baños</label>
+										<div class="select">
+									    	<select>
+									    		<option value="">1</option>
+									    		<option value="">2</option>
+									    		<option value="">3</option>
+									    		<option value="">4</option>
+									    		<option value="">5</option>
+									    		<option value="">6</option>
+									    		<option value="">7</option>
+									    		<option value="">8</option>
+									    		<option value="">9</option>
+									    		<option value="">10</option>
+									    		<option value="">11</option>
+									    		<option value="">12</option>
+										    </select>
+										</div>
+									</div>
+									<div class="field">
+										<label class="label" for="name">Años en Construcción</label>
+										<div class="control">
+									    	<input class="input" id="name" type="text" placeholder="Nombre Completo">
+										</div>
+									</div>
+									<div class="field">
+										<label class="label" for="name">Condición</label>
+										<div class="select">
+									    	<select>
+									    		<option>Nueva</option>
+									    		<option>Usada</option>
+									    		<option>Mejora</option>
+										    </select>
+										</div>
+									</div>
+									<div class="field">
+										<label class="label" for="name">Metros de terreno</label>
+										<div class="control">
+									    	<input class="input" id="name" type="text" placeholder="Ejemplo: 500 mt2">
+										</div>
+									</div>
+									<div class="field">
+										<label class="label" for="name">Metros en Construcción</label>
+										<div class="control">
+									    	<input class="input" id="name" type="text" placeholder="Ejemplo: 500 mt2">
+										</div>
+									</div>
+									<div class="field">
+										<label class="label" for="number">Pisos o Niveles</label>
+										<div class="control">
+									    	<input class="input" id="number" min="0" type="number" placeholder="0">
+										</div>
+									</div>
+									<div class="field price-field">
+										<label class="label" for="name">Precio</label>
+										<div class="control">
+											<select class="currency" name="" id="">
+												<option value="">RD$</option>
+												<option value="">US$</option>
+											</select>
+									    	<input class="input" id="price" type="text" placeholder="Año">
+										</div>
+									</div>
+									<div class="field">
+										<label class="label" for="name">Edificable</label>
+										<div class="control">
+										    <label class="radio">
+										    	<input type="radio" name="finance">
+										    	Si
+										    </label>
+										    <label class="radio">
+										    	<input type="radio" name="finance" checked>
+										    	No
+										    </label>
+										</div>
+									</div>
+									<div class="field">
+										<label class="label" for="name">Financiamiento Disponible</label>
+										<div class="control">
+										    <label class="radio">
+										    	<input type="radio" name="finance">
+										    	Si
+										    </label>
+										    <label class="radio">
+										    	<input type="radio" name="finance" checked>
+										    	No
+										    </label>
+										</div>
+									</div>
+									<div class="field">
+										<label class="label" for="name">Título</label>
+										<div class="control">
+										    <label class="radio">
+										    	<input type="radio" name="transfer">
+										    	Si
+										    </label>
+										    <label class="radio">
+										    	<input type="radio" name="transfer" checked>
+										    	No
+										    </label>
+										</div>
+									</div>
+									<div class="field">
+										<label class="label" for="name">Deslinde</label>
+										<div class="control">
+										    <label class="radio">
+										    	<input type="radio" name="transfer">
+										    	Si
+										    </label>
+										    <label class="radio">
+										    	<input type="radio" name="transfer" checked>
+										    	No
+										    </label>
+										</div>
+									</div>
+									<div class="field-description">
+										<label class="label">Descripción o comentario</label>
+										<div class="control">
+										    <textarea class="textarea" placeholder="Escribe una descripción o comentario sobre el articulo al subir..."></textarea>
+										</div>
+									</div>
+		        				</form>
+		        			</div>
+		        			<div key="2" action="" class="" v-if="activetab === 2">
+		        				<form action="" class="feature">
+		        					<div class="box-checkboxes security">
+		        						<h3>Seguridad</h3>
+		        						<div class="security-checkboxes">
+		        							<div class="check-content">
+									    		<input id="watchman" class="watchman" type="checkbox">
+			        							<label class="checkbox" for="watchman">
+										    		Watchman
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="electric-fence" class="electric-fence" type="checkbox">
+			        							<label class="checkbox" for="electric-fence">
+										    		Cerco Eléctrico
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="video-intercom" class="video-intercom" type="checkbox">
+			        							<label class="checkbox" for="video-intercom">
+										    		Vídeo Intercom
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="electric-gate" class="electric-gate" type="checkbox">
+			        							<label class="checkbox" for="electric-gate">
+										    		Portón Eléctrico
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="closed-project" class="closed-project" type="checkbox">
+			        							<label class="checkbox" for="closed-project">
+										    		Proyecto Cerrado
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="access-control" class="access-control" type="checkbox">
+			        							<label class="checkbox" for="access-control">
+										    		Control de Acceso
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="anti-noise" class="anti-noise" type="checkbox">
+			        							<label class="checkbox" for="anti-noise">
+										    		Cristales Antiruido
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="alarm-system" class="alarm-system" type="checkbox">
+			        							<label class="checkbox" for="alarm-system">
+										    		Sistema de Alarma
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="secure-hour" class="secure-hour" type="checkbox">
+			        							<label class="checkbox" for="secure-hour">
+										    		Seguridad 24 Horas
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="camera" class="camera" type="checkbox">
+			        							<label class="checkbox" for="camera">
+										    		Cámara de Vigilancia
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="air-bag-driver" class="air-bag-driver" type="checkbox">
+			        							<label class="checkbox" for="air-bag-driver">
+										    		Estructura antisísmica
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="air-bag-cop" class="air-bag-cop" type="checkbox">
+			        							<label class="checkbox" for="air-bag-cop">
+										    		Rejas en Puertas y Ventanas
+										    	</label>
+		        							</div>
+		        						</div>
+		        					</div>
+		        					<div class="box-checkboxes confort">
+		        						<h3>Confort</h3>
+		        						<div class="security-checkboxes">
+		        							<div class="check-content">
+									    		<input id="livin-room" class="livin-room" type="checkbox">
+			        							<label class="checkbox" for="livin-room">
+										    		Sala
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="kitchen" class="kitchen" type="checkbox">
+			        							<label class="checkbox" for="kitchen">
+										    		Cocina
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="balcony" class="balcony" type="checkbox">
+			        							<label class="checkbox" for="balcony">
+										    		Terraza
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="dining-room" class="dining-room" type="checkbox">
+			        							<label class="checkbox" for="dining-room">
+										    		Comedor
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="laundry" class="laundry" type="checkbox">
+			        							<label class="checkbox" for="laundry">
+										    		Área de Lavado
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="front-garden" class="front-garden" type="checkbox">
+			        							<label class="checkbox" for="front-garden">
+										    		Jardín Frontal
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="cruise-control" class="cruise-control" type="checkbox">
+			        							<label class="checkbox" for="cruise-control">
+										    		Calentador de Agua
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="heater" class="heater" type="checkbox">
+			        							<label class="checkbox" for="heater">
+										    		Baúl eléctrico
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="air-conditioner" class="air-conditioner" type="checkbox">
+			        							<label class="checkbox" for="air-conditioner">
+										    		Aire Acondicionado
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="internet" class="internet" type="checkbox">
+			        							<label class="checkbox" for="internet">
+										    		Internet
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="bbq" class="bbq" type="checkbox">
+			        							<label class="checkbox" for="bbq">
+										    		Área de BBQ
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="sauna" class="sauna" type="checkbox">
+			        							<label class="checkbox" for="sauna">
+										    		Sauna
+										    	</label>
+		        							</div>
+		        						</div>
+		        					</div>
+		        					<div class="box-checkboxes termination">
+		        						<h3>Terminación</h3>
+		        						<div class="security-checkboxes">
+		        							<div class="check-content">
+									    		<input id="auburn-floor" class="auburn-floor" type="checkbox">
+			        							<label class="checkbox" for="auburn-floor">
+										    		Piso en Caoba
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="wood-floor" class="wood-floor" type="checkbox">
+			        							<label class="checkbox" for="wood-floor">
+										    		Piso en Madera
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="marble-floor" class="marble-floor" type="checkbox">
+			        							<label class="checkbox" for="marble-floor">
+										    		Piso en Mármol
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="oak-floor" class="oak-floor" type="checkbox">
+			        							<label class="checkbox" for="oak-floor">
+										    		Puertas en Roble
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="auburn-door" class="auburn-door" type="checkbox">
+			        							<label class="checkbox" for="auburn-door">
+										    		Puertas en Caoba
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="sliding-mirror" class="sliding-mirror" type="checkbox">
+			        							<label class="checkbox" for="sliding-mirror">
+										    		Ventanas Corredizas
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="imported-ceramic" class="imported-ceramic" type="checkbox">
+			        							<label class="checkbox" for="imported-ceramic">
+										    		Cerámica Importada
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="imported-tap" class="imported-tap" type="checkbox">
+			        							<label class="checkbox" for="imported-tap">
+										    		Grifería Importada
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="facing-ceramic" class="facing-ceramic" type="checkbox">
+			        							<label class="checkbox" for="facing-ceramic">
+										    		Revestimiento en Cerámica
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="gypsum-cornice" class="gypsum-cornice" type="checkbox">
+			        							<label class="checkbox" for="gypsum-cornice">
+										    		Cornisas en Yeso
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="wood-modulate" class="wood-modulate" type="checkbox">
+			        							<label class="checkbox" for="wood-modulate">
+										    		Maderna Modular
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="stucco-wall" class="stucco-wall" type="checkbox">
+			        							<label class="checkbox" for="stucco-wall">
+										    		Paredes en Estuco
+										    	</label>
+		        							</div>
+		        						</div>
+		        					</div>
+		        					<div class="box-checkboxes recreation">
+		        						<h3>Recreación</h3>
+		        						<div class="security-checkboxes">
+		        							<div class="check-content">
+									    		<input id="swimming" class="swimming" type="checkbox">
+			        							<label class="checkbox" for="swimming">
+										    		Piscina
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="park" class="park" type="checkbox">
+			        							<label class="checkbox" for="park">
+										    		Parque
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="bar-zone" class="bar-zone" type="checkbox">
+			        							<label class="checkbox" for="bar-zone">
+										    		Área de Bar
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="green-zone" class="green-zone" type="checkbox">
+			        							<label class="checkbox" for="green-zone">
+										    		Área verde
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="gym" class="gym" type="checkbox">
+			        							<label class="checkbox" for="gym">
+										    		Gimnasio
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="restaurant" class="restaurant" type="checkbox">
+			        							<label class="checkbox" for="restaurant">
+										    		Restaurante
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="recreative-area" class="recreative-area" type="checkbox">
+			        							<label class="checkbox" for="recreative-area">
+										    		Área de Actividades
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="yoga" class="yoga" type="checkbox">
+			        							<label class="checkbox" for="yoga">
+										    		Salón de Yoga
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="golf" class="golf" type="checkbox">
+			        							<label class="checkbox" for="golf">
+										    		Campo de Golf
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="basket" class="basket" type="checkbox">
+			        							<label class="checkbox" for="basket">
+										    		Cancha de Basquetbol
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="football" class="football" type="checkbox">
+			        							<label class="checkbox" for="football">
+										    		Cancha de Football
+										    	</label>
+		        							</div>
+		        							<div class="check-content">
+									    		<input id="game-child" class="game-child" type="checkbox">
+			        							<label class="checkbox" for="game-child">
+										    		Área de juegos infantiles
+										    	</label>
+		        							</div>
+		        						</div>
+		        					</div>
+		        					<div class="other-features">
+		        						<h5>Para añadir una característica adicional, llene el campo debajo y haga click en el botón añadir.</h5>
+		        						<div class="new-feature">
+			        						<div class="field">
+												<label class="label" for="new">Característica</label>
+												<div class="control">
+											    	<input class="input" id="new" type="text" placeholder="Nueva característica">
+												</div>
+												<a class="button is-primary" href="#">
+													Añadir
+												</a>
+											</div>
+		        							<div class="feature-list">
+		        								<ul>
+		        									<li>
+			        									Luces LED Traseras
+			        									<a class="delete-feture" href="#"><i class="fas fa-times"></i></a>
+			        								</li>
+			        								<li>
+			        									Luces LED Traseras
+			        									<a class="delete-feture" href="#"><i class="fas fa-times"></i></a>
+			        								</li>
+			        								<li>
+			        									Luces LED Traseras
+			        									<a class="delete-feture" href="#"><i class="fas fa-times"></i></a>
+			        								</li>
+			        								<li>
+			        									Luces LED Traseras
+			        									<a class="delete-feture" href="#"><i class="fas fa-times"></i></a>
+			        								</li>
+			        								<li>
+			        									Luces LED Traseras
+			        									<a class="delete-feture" href="#"><i class="fas fa-times"></i></a>
+			        								</li>
+		        								</ul>
+		        							</div>
+		        						</div>
+		        					</div>
+		        				</form>
+		        			</div>
+		        			<div key="3" action="" class="" v-if="activetab === 3">
+		        				<h2>Tab3</h2>
+		        			</div>
+		        			<div key="4" action="" class="" v-if="activetab === 4">
+		        				<form class="pubish-direction" action="">
+		        					<div class="fields">
+		        						<div class="field">
+											<label class="label">País</label>
+											<div class="select">
+										    	<select>
+										    		<option>República Dominicana</option>
+											    </select>
+											</div>
+										</div>
+			        					<div class="field">
+											<label class="label" for="name">Provincia</label>
+											<div class="select">
+										    	<select>
+										    		<option>República Dominicana</option>
+											    </select>
+											</div>
+										</div>
+										<div class="field">
+											<label class="label" for="name">Sector</label>
+											<div class="select">
+										    	<select>
+										    		<option>República Dominicana</option>
+											    </select>
+											</div>
+										</div>
+										<div class="field">
+											<label class="label" for="name">Dirección</label>
+											<div class="control">
+										    	<input class="input" id="name" type="text" placeholder="Calle, edificio, #, etc...">
+											</div>
+										</div>
+		        					</div>
+		        					<div class="map">
+		        						<img src="/img/map-example.jpg" alt="">
+		        					</div>
+		        					<button class="button is-primary">
+		        						Publicar Articulo &nbsp;
+		        						<i class="fas fa-plus-circle"></i>
+		        					</button>
+		        				</form>
+		        			</div>
+	        			</transition-group>
+	        		</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer id="main-footer">
+		<div class="container is-fluid footer">
+			<div class="columns">
+				<div class="column">
+					<h3><a href="/">Ir a la Portada</a></h3>
+					<ul>
+						<li>
+							<a class="footer-link" href="#">Políticas del Sitio Web</a>
+						</li>
+						<li>
+							<a class="footer-link" href="#">Términos y Condiciones</a>
+						</li>
+					</ul>
+				</div>
+				<div class="column">
+					<h3>Accesos Rapidos</h3>
+					<ul class="quick-links fa-ul">
+						<li>
+							<span class="fa-li"><i class="fas fa-chevron-right"></i></span>
+							<a href="#" class="item-link">Vehículos</a>
+						</li>
+						<li>
+							<span class="fa-li"><i class="fas fa-chevron-right"></i></span>
+							<a href="#" class="item-link">Inmuebles</a>
+						</li>
+						<li>
+							<span class="fa-li"><i class="fas fa-chevron-right"></i></span>
+							<a href="#" class="item-link">Dealers</a>
+						</li>
+						<li>
+							<span class="fa-li"><i class="fas fa-chevron-right"></i></span>
+							<a href="#" class="item-link">MotoPrestamos</a>
+						</li>
+						<li>
+							<span class="fa-li"><i class="fas fa-chevron-right"></i></span>
+							<a href="#" class="item-link">Inmobiliarias</a>
+						</li>
+						<li>
+							<span class="fa-li"><i class="fas fa-chevron-right"></i></span>
+							<a href="#" class="item-link">RentCars</a>
+						</li>
+						<li>
+							<span class="fa-li"><i class="fas fa-chevron-right"></i></span>
+							<a href="#" class="item-link">Náuticas</a>
+						</li>
+						<li>
+							<span class="fa-li"><i class="fas fa-chevron-right"></i></span>
+							<a href="#" class="item-link">Motoprestamos</a>
+						</li>
+					</ul>
+				</div>
+				<div class="column">
+					<h3><a href="/pages/contacto.html">Detalles de Contacto</a></h3>
+					<ul class="footer-contact fa-ul">
+						<li>
+							<span class="fa-li"><i class="fas fa-phone fa-rotate-90"></i></span>
+							<a href="#" class="item-link">+1 809-000-0000</a>
+						</li>
+						<li>
+							<span class="fa-li"><i class="fas fa-phone fa-rotate-90"></i></span>
+							<a href="#" class="item-link">+1 809-000-0000</a>
+						</li>
+						<li>
+							<span class="fa-li"><i class="fas fa-envelope"></i></span>
+							<a href="mailto:info@empresasjna.com" class="item-link">info@empresasjna.com</a>
+						</li>
+					</ul>
+					<ul class="social-media">
+						<li ><span class="follow-us">Siguenos en: </span></li>
+						<li>
+							<a class="footer-link" href="#">
+								<i class="fab fa-facebook-square"></i>
+							</a>
+						</li>
+						<li>
+							<a class="footer-link" href="#">
+								<i class="fab fa-instagram"></i>
+							</a>
+						</li>
+						<li>
+							<a class="footer-link" href="#">
+								<i class="fab fa-whatsapp"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="copyright-content">
+			<p class="copyright-text">Empresas JNA Copyright © 2020.</p>
+		</div>
+	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script type="text/JavaScript" src="/js/main.js"></script>
+</body>
+</html>
