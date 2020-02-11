@@ -62,7 +62,7 @@
 							<h3>Irene Mendez</h3>
 						</div>
 						<div class="box-buttons">
-							<a class="button is-primary outline" href="#">Publicar Articulo</a>
+							<a class="button is-primary outline" href="/pages/admin/profile-admin-publish-ad-car.html">Publicar Articulo</a>
 							<a class="button is-primary outline" href="/pages/admin/profile-admin-online-ads.html">Articulos Disponibles</a>
 							<a class="button is-primary outline" href="/pages/admin/profile-admin-sold-ads.html">Articulos Vendidos</a>
 							<a class="button is-primary outline" href="#">Mensajes Entrantes</a>
@@ -75,10 +75,92 @@
 						<a href="/pages/sale.html" class="button is-second">Registrarme</a>
 					</div>
 				</aside>
-				<div class="column">
-					<h3>Información Personal</h3>
+				<div class="column admin-content">
 					<div class="profile-content profile-admin">
-						
+						<form class="edit-personal-info-form" action="">
+							<h3>Información Personal</h3>
+							<div class="field">
+								<label for="name" class="label">Nombre Completo</label>
+								<div class="control">
+									<input id="name" type="text" class="input" placeholder="Su nombre completo">
+								</div>
+							</div>
+							<div class="field">
+								<label for="email" class="label">Email</label>
+								<div class="control">
+									<input id="email" type="email" class="input" placeholder="ejemplo@ejemplo.com">
+								</div>
+							</div>
+							<div class="field">
+								<label for="tel" class="label">Teléfono</label>
+								<div class="control">
+									<input id="tel" type="text" class="input" placeholder="(809) 000-0000">
+								</div>
+							</div>
+							<div class="field">
+								<label for="phone" class="label">Celular 1</label>
+								<div class="control">
+									<input id="phone" type="text" class="input" placeholder="(809) 000-0000">
+								</div>
+							</div>
+							<div class="field">
+								<label for="phone2" class="label">Celular 2</label>
+								<div class="control">
+									<input id="phone2" type="text" class="input" placeholder="(809) 000-0000">
+								</div>
+							</div>
+							<div class="field">
+								<label for="country" class="label">País</label>
+								<div class="control">
+									<input id="country" type="text" class="input" placeholder="Escriba su país">
+								</div>
+							</div>
+							<div class="field">
+								<label for="province" class="label">Provincia</label>
+								<div class="control">
+									<input id="province" type="text" class="input" placeholder="Su provincia">
+								</div>
+							</div>
+							<div class="field">
+								<label for="sector" class="label">Sector</label>
+								<div class="control">
+									<input id="sector" type="text" class="input" placeholder="Su sector">
+								</div>
+							</div>
+							<div class="field">
+								<label class="label">Dirección</label>
+								<div class="control">
+									<textarea class="textarea" placeholder="Dirección"></textarea>
+								</div>
+							</div>
+							<button class="button is-primary">
+								Actualizar Información
+							</button>
+						</form>
+						<form class="edit-password-form" action="">
+							<h3>Cambiar Contraseña</h3>
+							<div class="field">
+								<label for="name" class="label">Contraseña actual</label>
+								<div class="control">
+									<input id="name" type="password" class="input" placeholder="Contraseña actual">
+								</div>
+							</div>
+							<div class="field">
+								<label for="name" class="label">Contraseña nueva</label>
+								<div class="control">
+									<input id="name" type="password" class="input" placeholder="Contraseña nueva">
+								</div>
+							</div>
+							<div class="field">
+								<label for="name" class="label">Confirmar contraseña nueva</label>
+								<div class="control">
+									<input id="name" type="password" class="input" placeholder="Confirmar contraseña nueva">
+								</div>
+							</div>
+							<button class="button is-primary">
+								Cambiar Contraseña
+							</button>
+						</form>
 					</div>
 				</div>
 			</div>

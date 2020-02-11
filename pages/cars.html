@@ -49,6 +49,7 @@
 		</nav>
 	</header>
 	<div id="wrapper">
+
 		<div id="products-content">
 			<div class="columns">
 				<aside class="column is-12-mobile is-3-desktop box-sidebar">
@@ -58,134 +59,50 @@
 							<div class="field">
 								<label class="label">Vehículos</label>
 								<div class="select">
-							    	<select>
-							    		<option>Todas los vehículos</option>
-							    		<option>Carros</option>
-							    		<option>Motor</option>
-							    		<option>Barco</option>
+							    	<select v-model="carType">
+							    		<option value="Carro">Carro</option>
+							    		<option value="Motor">Motor</option>
+							    		<option value="Barco">Barco</option>
 								    </select>
 								</div>
 							</div>
-							<div class="field">
-								<label class="label">Tipo de Vehículo</label>
-								<div class="select">
-							    	<select>
-							    		<option>Todos</option>
-							    		<option>Sedan</option>
-							    		<option>Suv</option>
-							    		<option>Coupe</option>
-							    		<option>Minivan</option>
-								    </select>
-								</div>
-							</div>
-							<div class="field">
-								<label class="label">Marca</label>
-								<div class="select">
-							    	<select>
-							    		<option>Todas las Marcas</option>
-							    		<option>Marca 1</option>
-							    		<option>Marca 2</option>
-							    		<option>Marca 3</option>
-								    </select>
-								</div>
-							</div>
-							<div class="field">
-								<label class="label">Modelo</label>
-								<div class="select">
-							    	<select>
-							    		<option>Todas los modelos</option>
-							    		<option>Modelo 1</option>
-							    		<option>Modelo 2</option>
-							    		<option>Modelo 3</option>
-								    </select>
-								</div>
-							</div>
-							<div class="field">
-								<label class="label">Provincias</label>
-								<div class="select">
-							    	<select>
-							    		<option>Todas las Provincias</option>
-							    		<option>La Altagracia</option>
-							    		<option>La Romana</option>
-							    		<option>El Seibo</option>
-							    		<option>Hato Mayor</option>
-								    </select>
-								</div>
-							</div>
-							<div class="field mid-field">
-								<label class="label">Condición</label>
-								<div class="select">
-							    	<select>
-							    		<option>Todas</option>
-							    		<option>Nuevo</option>
-							    		<option>Usado</option>
-								    </select>
-								</div>
-							</div>
-							<div class="field mid-field">
-								<label class="label">Estado</label>
-								<div class="select">
-							    	<select>
-							    		<option>Cualquiera</option>
-							    		<option>En Venta</option>
-							    		<option>En Renta</option>
-							    		<option>Venta y/o Alquiler</option>
-								    </select>
-								</div>
-							</div>
-							<div class="field">
-								<label class="label">Provincias</label>
-								<div class="select">
-							    	<select>
-							    		<option>Todas las Provincias</option>
-							    		<option>La Altagracia</option>
-							    		<option>La Romana</option>
-							    		<option>El Seibo</option>
-							    		<option>Hato Mayor</option>
-								    </select>
-								</div>
-							</div>
-							<a class="advanced-search button is-primary outline" @click="advancedSearchShow().prevent">
-								<i class="fas fa-plus"></i>
-								Busqueda Avanzada
-							</a>
-							<div v-if="advancedSearch" class="box-advanced-search">
+							<div v-if="carType === 'Carro'">
 								<div class="field">
-									<label class="label">Combustible</label>
+									<label class="label">Tipo de Vehículo</label>
 									<div class="select">
 								    	<select>
 								    		<option>Todos</option>
-								    		<option>Gasolina</option>
-								    		<option>Gas</option>
+								    		<option>Sedan</option>
+								    		<option>Suv</option>
+								    		<option>Coupe</option>
+								    		<option>Minivan</option>
 									    </select>
 									</div>
 								</div>
 								<div class="field">
-									<label class="label">Transmisión</label>
+									<label class="label">Marca</label>
 									<div class="select">
 								    	<select>
-								    		<option>Todas</option>
-								    		<option>La Altagracia</option>
-								    		<option>La Romana</option>
-								    		<option>El Seibo</option>
-								    		<option>Hato Mayor</option>
+								    		<option>Todas las Marcas</option>
+								    		<option>Marca 1</option>
+								    		<option>Marca 2</option>
+								    		<option>Marca 3</option>
 									    </select>
 									</div>
 								</div>
 								<div class="field">
-									<label class="label">Tracción</label>
+									<label class="label">Modelo</label>
 									<div class="select">
 								    	<select>
-								    		<option>Todas</option>
-								    		<option>Delantera</option>
-								    		<option>Trasera</option>
-								    		<option>La Romana</option>
-								    		<option>Hato Mayor</option>
+								    		<option>Todas los modelos</option>
+								    		<option>Modelo 1</option>
+								    		<option>Modelo 2</option>
+								    		<option>Modelo 3</option>
 									    </select>
 									</div>
 								</div>
 								<div class="field">
-									<label class="label">Vendedor</label>
+									<label class="label">Provincias</label>
 									<div class="select">
 								    	<select>
 								    		<option>Todas las Provincias</option>
@@ -194,6 +111,251 @@
 								    		<option>El Seibo</option>
 								    		<option>Hato Mayor</option>
 									    </select>
+									</div>
+								</div>
+								<div class="field mid-field">
+									<label class="label">Condición</label>
+									<div class="select">
+								    	<select>
+								    		<option>Todas</option>
+								    		<option>Nuevo</option>
+								    		<option>Usado</option>
+									    </select>
+									</div>
+								</div>
+								<div class="field mid-field">
+									<label class="label">Estado</label>
+									<div class="select">
+								    	<select>
+								    		<option>Cualquiera</option>
+								    		<option>En Venta</option>
+								    		<option>En Renta</option>
+								    		<option>Venta y/o Alquiler</option>
+									    </select>
+									</div>
+								</div>
+								<div class="field">
+									<label class="label">Provincias</label>
+									<div class="select">
+								    	<select>
+								    		<option>Todas las Provincias</option>
+								    		<option>La Altagracia</option>
+								    		<option>La Romana</option>
+								    		<option>El Seibo</option>
+								    		<option>Hato Mayor</option>
+									    </select>
+									</div>
+								</div>
+								<a class="advanced-search button is-primary outline" @click="advancedSearchShow().prevent">
+									<i class="fas fa-plus"></i>
+									Busqueda Avanzada
+								</a>
+								<div v-if="advancedSearch" class="box-advanced-search">
+									<div class="field">
+										<label class="label">Combustible</label>
+										<div class="select">
+									    	<select>
+									    		<option>Todos</option>
+									    		<option>Gasolina</option>
+									    		<option>Gas</option>
+										    </select>
+										</div>
+									</div>
+									<div class="field">
+										<label class="label">Transmisión</label>
+										<div class="select">
+									    	<select>
+									    		<option>Todas</option>
+									    		<option>La Altagracia</option>
+									    		<option>La Romana</option>
+									    		<option>El Seibo</option>
+									    		<option>Hato Mayor</option>
+										    </select>
+										</div>
+									</div>
+									<div class="field">
+										<label class="label">Tracción</label>
+										<div class="select">
+									    	<select>
+									    		<option>Todas</option>
+									    		<option>Delantera</option>
+									    		<option>Trasera</option>
+									    		<option>La Romana</option>
+									    		<option>Hato Mayor</option>
+										    </select>
+										</div>
+									</div>
+									<div class="field">
+										<label class="label">Vendedor</label>
+										<div class="select">
+									    	<select>
+									    		<option>Todas las Provincias</option>
+									    		<option>La Altagracia</option>
+									    		<option>La Romana</option>
+									    		<option>El Seibo</option>
+									    		<option>Hato Mayor</option>
+										    </select>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div v-else-if="carType === 'Motor'">
+								<div class="field">
+									<label class="label">Tipo de Motor</label>
+									<div class="select">
+								    	<select>
+								    		<option>Todos</option>
+								    		<option>FourWheel</option>
+								    		<option>Motor</option>
+								    		<option>Pasola</option>
+									    </select>
+									</div>
+								</div>
+								<div class="field">
+									<label class="label">Marca</label>
+									<div class="select">
+								    	<select>
+								    		<option>Yamaha</option>
+								    		<option>Suzuki</option>
+								    		<option>PGO</option>
+									    </select>
+									</div>
+								</div>
+								<div class="field">
+									<label class="label">Modelo</label>
+									<div class="select">
+								    	<select>
+								    		<option>Modelo 1</option>
+								    		<option>Modelo 2</option>
+								    		<option>Modelo 3</option>
+									    </select>
+									</div>
+								</div>
+								<div class="field">
+									<label class="label">Condición</label>
+									<div class="select">
+								    	<select>
+								    		<option>Todas</option>
+								    		<option>Nuevo</option>
+								    		<option>Usado</option>
+									    </select>
+									</div>
+								</div>
+								<div class="field">
+									<label class="label">Provincias</label>
+									<div class="select">
+								    	<select>
+								    		<option>Todas las Provincias</option>
+								    		<option>La Altagracia</option>
+								    		<option>La Romana</option>
+								    		<option>El Seibo</option>
+								    		<option>Hato Mayor</option>
+									    </select>
+									</div>
+								</div>
+								<a class="advanced-search button is-primary outline" @click="advancedSearchShow().prevent">
+									<i class="fas fa-plus"></i>
+									Busqueda Avanzada
+								</a>
+								<div v-if="advancedSearch" class="box-advanced-search">
+									<div class="field">
+										<label class="label">Motor CC</label>
+										<div class="select">
+									    	<select>
+									    		<option>50 CC</option>
+									    		<option>70 CC</option>
+									    		<option>90 CC</option>
+									    		<option>100 CC</option>
+									    		<option>110 CC</option>
+									    		<option>125 CC</option>
+									    		<option>150 CC</option>
+									    		<option>200 CC</option>
+									    		<option>250 CC</option>
+									    		<option>300 CC</option>
+										    </select>
+										</div>
+									</div>
+									<div class="field">
+										<label class="label">Vendedor</label>
+										<div class="select">
+									    	<select>
+									    		<option>Todas las Provincias</option>
+									    		<option>La Altagracia</option>
+									    		<option>La Romana</option>
+									    		<option>El Seibo</option>
+									    		<option>Hato Mayor</option>
+										    </select>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div v-else-if="carType === 'Barco'">
+								<div class="field">
+									<label class="label">Marca</label>
+									<div class="select">
+								    	<select>
+								    		<option>Marca 1</option>
+								    		<option>Marca 2</option>
+								    		<option>Marca 3</option>
+									    </select>
+									</div>
+								</div>
+								<div class="field">
+									<label class="label">Eslora</label>
+									<div class="control">
+									    <input class="input" type="number" placeholder="1 M">
+									</div>
+								</div>
+								<div class="field">
+									<label class="label">Modelo</label>
+									<div class="select">
+								    	<select>
+								    		<option>Modelo 1</option>
+								    		<option>Modelo 2</option>
+								    		<option>Modelo 3</option>
+									    </select>
+									</div>
+								</div>
+								<div class="field">
+									<label class="label">Provincias</label>
+									<div class="select">
+								    	<select>
+								    		<option>Todas las Provincias</option>
+								    		<option>La Altagracia</option>
+								    		<option>La Romana</option>
+								    		<option>El Seibo</option>
+								    		<option>Hato Mayor</option>
+									    </select>
+									</div>
+								</div>
+								<a class="advanced-search button is-primary outline" @click="advancedSearchShow().prevent">
+									<i class="fas fa-plus"></i>
+									Busqueda Avanzada
+								</a>
+								<div v-if="advancedSearch" class="box-advanced-search">
+									<div class="field">
+										<label class="label">Combustible</label>
+										<div class="select">
+									    	<select>
+									    		<option>Todas las Provincias</option>
+									    		<option>La Altagracia</option>
+									    		<option>La Romana</option>
+									    		<option>El Seibo</option>
+									    		<option>Hato Mayor</option>
+										    </select>
+										</div>
+									</div>
+									<div class="field">
+										<label class="label">Vendedor</label>
+										<div class="select">
+									    	<select>
+									    		<option>Todas las Provincias</option>
+									    		<option>La Altagracia</option>
+									    		<option>La Romana</option>
+									    		<option>El Seibo</option>
+									    		<option>Hato Mayor</option>
+										    </select>
+										</div>
 									</div>
 								</div>
 							</div>

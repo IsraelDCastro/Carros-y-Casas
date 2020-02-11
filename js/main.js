@@ -3,15 +3,19 @@ const product = new Vue({
 	data: {
 		gridOrList: 'Grid View',
 		view: false,
+		carType: 'Carro',
 		advancedSearch: false
 	},
 	computed: {
-		gridOrList2 () {
-			if (this.gridOrList === "List View") {
-				return 'list-view'
-			} else {
-				return 'grid-view'
-			}
+		// gridOrList2 () {
+		// 	if (this.gridOrList === "List View") {
+		// 		return 'list-view'
+		// 	} else {
+		// 		return 'grid-view'
+		// 	}
+		// },
+		gridOrList2 () { 
+			return this.gridOrList === "List View" ? "list-view" : "grid-view"
 		},
 		listView() {
 			if (this.gridOrList === "List View") {
