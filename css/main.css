@@ -1391,6 +1391,81 @@ hr {
   opacity: 0;
 }
 
+#message {
+  border-radius: 5px;
+  box-shadow: 0 0 12px #AAA;
+}
+#message .sidebar-message {
+  padding: 30px 15px;
+  border-right: 1px solid #CCC;
+}
+#message .sidebar-message .field {
+  margin-bottom: 20px;
+}
+#message .sidebar-message .content-links .link-message {
+  color: #222;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  padding: 10px;
+  width: 100%;
+  position: relative;
+}
+#message .sidebar-message .content-links .link-message .fas.fa-circle {
+  color: #007CCC;
+}
+#message .sidebar-message .content-links .link-message .far.fa-circle {
+  color: #5CB85C;
+}
+#message .sidebar-message .content-links .link-message .fa-circle {
+  position: absolute;
+  right: 16px;
+  top: 42px;
+}
+#message .message-content {
+  padding: 30px 15px;
+}
+#message .message-content p {
+  color: #444;
+}
+#message .message-content .msg-header {
+  margin-bottom: 15px;
+}
+#message .message-content .msg-header h4 {
+  margin-bottom: 15px;
+}
+#message .message-content .msg-header .info-author {
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+}
+#message .message-content .msg-header .info-author .author-img {
+  flex: 0 0 12%;
+  margin-right: 15px;
+}
+#message .message-content .msg-header .info-author .name {
+  font-size: 24px;
+}
+#message .message-content .msg-header .info-author .date {
+  color: #777;
+}
+#message .message-content .msg-footer {
+  margin-top: 30px;
+  display: flex;
+  flex-flow: row wrap;
+}
+#message .message-content .msg-footer .field {
+  flex: 0 0 80%;
+  margin-right: 20px;
+  margin-bottom: 0;
+}
+#message .message-content .msg-footer .field .textarea {
+  resize: none;
+}
+#message .message-content .msg-footer button {
+  align-self: flex-end;
+}
+
 /****** Profile Page End ******/
 /****** Login and Register ******/
 #form-section {

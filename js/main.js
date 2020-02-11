@@ -45,6 +45,6 @@ const profile = new Vue({
 const publish = new Vue({
 	el: '#form-publish',
 	data: {
-		activetab: 2
+		activetab: 1
 	}
 })
