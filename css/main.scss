@@ -302,10 +302,10 @@ hr {
 }
 
 .change-role{
-	padding: 20px 10px;
+	padding: 30px 15px;
 	background-color: #007CCC;
 	border-radius: 5px;
-	h4, p{
+	h4, h5, p{
 		text-align: center;
 		color: #FFF;
 		margin-bottom: 10px;
@@ -1063,10 +1063,13 @@ hr {
                     font-family: 'Lato', sans-serif;
                 }
             }
-            h3 {
+            h3, h4 {
                 text-align: center;
-                font-family: 'Lato', sans-serif;
                 font-weight: 500;
+            }
+            .slogan {
+            	font-weight: 400;
+            	text-align: center;
             }
         }
     }
@@ -1168,36 +1171,7 @@ hr {
 		    display: grid;
 		    grid-template-columns: repeat(4, 1fr);
 		    grid-gap: 30px;
-		    .prod-link{
-				box-shadow: 0 2px 6px #AAA;
-				border-radius: 5px;
-			    transition: all .3s ease-in-out;
-			    color: #000;
-			    width: 100%;
-			}
-			.car-prod {
-			    border-radius: 5px;
-			    overflow: hidden;
-			    box-shadow: 0 3px 6px #AAA;
-		        transition: all 1s ease;
-
-			    .img-prod {
-				    border-radius: 5px;
-				    overflow: hidden;
-				}
-				.content-info {
-				    padding: 10px;
-					.prod-title {
-					    margin-bottom: 5px;
-					    font-size: 21px;
-					}
-					p {
-					    margin: 0;
-					    color: #555;
-					    font-size: 14px;
-					}
-				}
-			}
+		    
 			&.profile-admin {
 			    display: flex;
 			    flex-flow: column wrap;
@@ -1460,6 +1434,42 @@ hr {
 	.form-content {
 		padding: 0;
 		margin-bottom: 30px;
+	}
+	.banner-company {
+		width: 100%;
+		height: 50vh;
+		padding: 30px;
+		position: relative;
+		background: url('/img/banner-abstract.jpg');
+		.type-company {
+		    text-align: right;
+		    color: #FFF;
+		    text-shadow: 0px 2px 6px #000;
+		}
+		.upload-image {
+		    background-color: rgba(255, 255, 255, 0.5);
+		    padding: 10px;
+		    overflow: hidden;
+		    width: 70px;
+		    height: 70px;
+		    display: inline-flex;
+		    justify-content: center;
+		    align-items: center;
+		    font-size: 34px;
+		    border-radius: 50%;
+		    position: absolute;
+		    bottom: 40px;
+		    right: 70px;
+		    .file-input {
+			    cursor: pointer;
+			}
+		}
+	}
+	.profile-sidebar {
+	    margin: -120px 30px 30px;
+	    align-self: flex-start;
+	    z-index: 9;
+	    background-color: #FFF;
 	}
 }
 
@@ -1796,6 +1806,142 @@ hr {
 					margin-top: 30px;
 				}
 			}
+		}
+	}
+}
+
+.online-product {
+	.filter-form {
+		justify-content: flex-end;
+	}
+	.profile-prod-content {
+	    display: grid;
+	    grid-template-columns: repeat(4, 1fr);
+	    grid-gap: 25px;
+	}
+}
+.our-service {
+	.values {
+		display: flex;
+		justify-content: space-around;
+		flex-flow: row wrap;
+		margin-bottom: 30px;
+		.value {
+		    flex: 0 0 30%;
+		    text-align: center;
+		    h3 {
+		    	margin-bottom: 15px;
+		    }
+		}
+	}
+	.services-comp {
+		width: 90%;
+		margin: 0 auto;
+		h3 {
+			margin-bottom: 15px;
+			text-align: center;
+			&::after {
+				content: " ";
+				display: block;
+				width: 30%;
+				height: 3px;
+				border-radius: 5px;
+				background-color: #222;
+				margin: 0 auto;
+			}
+		}
+		.service {
+			padding: 0 30px;
+			h4{
+				margin-bottom: 15px;
+			}
+			ul{
+				margin-left: 30px;
+			}
+			li{
+				list-style-type: disc;
+			}
+		}
+	}
+}
+.about-company {
+	.description {
+		width: 80%;
+		margin: 0 auto;
+		h3 {
+			margin-bottom: 15px;
+			text-align: center;
+		}
+	}
+}
+.contact-comp {
+	.contact-details{
+		margin-bottom: 30px;
+		display: flex;
+		justify-content: space-around;
+		.info-comp, .schedule-comp{
+			background-color: #007CCC;
+			padding: 30px 20px;
+			color: #FFF;
+			border-radius: 5px;
+			box-shadow: 0 2px 6px #007CCC;
+		}
+		.info-comp {
+			ul {
+				li{
+					margin-bottom: 10px;
+					a{
+						color: #FFF;
+						transition: all .4s ease-in;
+						&:hover {
+							color: #E6B112;
+						}
+					}
+					span {
+						font-weight: 700;
+					}
+				}
+			}
+		}
+		.schedule-comp {
+			h4 {
+				margin-bottom: 15px;
+			}
+			.table {
+				background-color: transparent;
+				color: #FFF;
+			}
+		}
+	}
+}
+
+.prod-link{
+	box-shadow: 0 2px 6px #AAA;
+	border-radius: 5px;
+    transition: all .3s ease-in-out;
+    color: #000;
+    width: 100%;
+}
+.car-prod {
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 3px 6px #AAA;
+    transition: all 1s ease;
+
+    .img-prod {
+	    border-radius: 5px;
+	    overflow: hidden;
+	}
+	.content-info {
+	    padding: 10px;
+		.prod-title {
+		    margin-bottom: 5px;
+		    font-size: 21px;
+		}
+		p {
+		    margin: 0;
+		    color: #555;
+		    font-size: 14px;
 		}
 	}
 }

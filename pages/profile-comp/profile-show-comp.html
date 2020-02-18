@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Perfil | Carros y Casas</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src="https://kit.fontawesome.com/9aa0e1d6d6.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+	<header>
+		<nav class="navbar is-transparent">
+			<div id="topbar">
+			 	<div class="navbar-brand">
+			    	<a class="navbar-item" href="/">
+				    	<img src="/img/innovacode_wt.png" alt="Empresas JNA.com">
+				    </a>
+				    <div class="navbar-burger burger" data-target="main-navbar">
+				    	<span></span>
+				    	<span></span>
+				    	<span></span>
+				    </div>
+				</div>
+				<div class="topbar-menu">
+					<div class="navbar-end">
+				    	<a class="navbar-item" href="/pages/sale.html">Vender</a>
+				    	<a class="navbar-item" href="/pages/login-register.html">Ingresar</a>
+					</div>
+				</div>
+			</div>
+
+			<div id="main-navbar" class="navbar-menu">
+		    	<div class="navbar-center">
+			    	<a class="navbar-item" href="/">Portada</a>
+		      		<a class="navbar-item" href="/pages/cars.html">Vehiculos</a>
+		         	<a class="navbar-item" href="/pages/real-estate.html">Propiedades</a>
+				    <div class="navbar-item has-dropdown is-hoverable">
+		        		<a class="navbar-link" href="/pages/companies.html">Empresas</a>
+				        <div class="navbar-dropdown is-boxed">
+				         	<a class="navbar-item" href="/pages/companies/dealers.html">Dealers</a>
+				         	<a class="navbar-item" href="/pages/companies/real-estate.html">Inmobiliarias</a>
+				         	<a class="navbar-item" href="/pages/companies/motor.html">Motoprestamos</a>
+				         	<a class="navbar-item" href="/pages/companies/ships.html">Navieras</a>
+				        </div>
+				    </div>
+			    	<a class="navbar-item" href="/pages/contacto.html">Contacto</a>
+		    	</div>
+			</div>
+		</nav>
+	</header>
+	<div id="wrapper">
+		<div id="company-profile-content">
+			<div class="columns is-multiline">
+				<div class="banner-company column is-12">
+					<h3 class="type-company">Inmobiliaria</h3>
+				</div>
+				<aside class="column is-12-mobile is-3-desktop profile-sidebar admin-sidebar">
+					<div class="profile-box">
+						<div class="profile-header">
+							<p class="code-id">Código No.: 0001</p>
+							<figure class="profile-img">
+								<img src="/img/profile-img.jpg" alt="Profile Image">
+								<figcaption>Empresa</figcaption>
+							</figure>
+							<h4>Inmobiliaria Mendez</h4>
+							<h6 class="slogan">Encuentra tu paraiso con nosotros.</h6>
+						</div>
+					</div>
+					<div class="contact-info">
+						<ul>
+							<li>
+								<span><i class="fas fa-phone-alt"></i> Tel.: </span>
+								<a href="#">809-000-0000</a>
+							</li>
+							<li>
+								<span><i class="fas fa-mobile-alt"></i> Cel.: </span>
+								<a href="#">809-000-0000</a>
+							</li>
+						</ul>
+					</div>
+					<form action="" class="profile-contact-form" v-if="profileForm">
+						<div class="field">
+							<div class="control">
+						    	<input class="input" id="name" type="text" placeholder="Nombre Completo">
+							</div>
+						</div>
+						<div class="field">
+							<div class="control">
+						    	<input class="input" id="email" type="email" placeholder="ejemplo@ejemplo.com">
+							</div>
+						</div>
+						<div class="field">
+							<div class="control">
+						    	<input class="input" id="phone" type="text" placeholder="(809) 000-0000">
+							</div>
+						</div>
+						<div class="field">
+							<div class="control">
+						    	<input class="input" id="subject" type="text" placeholder="Asunto">
+							</div>
+						</div>
+						<div class="field">
+							<div class="control">
+						    	<textarea class="textarea" id="subject" placeholder="¡Tus preguntas son muy importantes! Escríbenos tus dudas o comentarios..."></textarea>
+							</div>
+						</div>
+						<div class="field text-right">
+							<button class="button is-primary">
+								Enviar
+							</button>
+						</div>
+					</form>
+				</aside>
+				<div class="column admin-content">
+					<div class="profile-content profile-admin">
+						<div id="global-tabs" class="column form-content">
+							<ul class="tabs-lists">
+			        			<li class="tab-link">
+			        				<a @click="activetab=1":class="[ activetab === 1 ? 'active' : '' ]">
+			        					Articulos Disponibles
+			        				</a>
+			        			</li>
+			        			<li class="tab-link">
+			        				<a @click="activetab=2" :class="[ activetab === 2 ? 'active' : '' ]">
+			        					Nuestros Servicios
+			        				</a>
+			        			</li>
+			        			<li class="tab-link">
+			        				<a @click="activetab=3":class="[ activetab === 3 ? 'active' : '' ]">
+			        					Quienes somos
+			        				</a>
+			        			</li>
+			        			<li class="tab-link">
+			        				<a @click="activetab=4" :class="[ activetab === 4 ? 'active' : '' ]">
+			        					Contacto
+			        				</a>
+			        			</li>
+			        		</ul>
+			        		<div class="tabs-content">
+				        		<transition-group name="fade-left">
+				        			<div action="" key="1" class="online-product" v-if="activetab === 1">
+										<div class="filter-content">
+											<form action="" class="filter-form">
+												<div class="select">
+													<label for="">Ordernar Por: &nbsp;</label>
+													<select name="select-view" class="select-view" id="">
+														<option value="Default">Por Defecto</option>
+														<option value="A to Z">A a Z</option>
+														<option value="Z to A">Z a A</option>
+													</select>
+												</div>
+											</form>
+										</div>
+										<hr>
+										<div class="profile-prod-content">
+											<a href="#" class="prod-link">
+												<article class="car-prod">
+													<div class="img-prod">
+														<img src="/img/ford-mustang.jpg" alt="Ford Mustang 66">
+													</div>
+													<div class="content-info">
+														<h4 class="prod-title">Ford Mustang 66</h4>
+														<div class="prod-status">
+															<p>2020 / Nuevo / Diesel</p>
+														</div>
+														<p class="price">
+															Venta RD$ 350,000
+														</p>
+													</div>
+												</article>
+											</a>
+											<a href="#" class="prod-link">
+												<article class="car-prod">
+													<div class="img-prod">
+														<img src="/img/ford-mustang.jpg" alt="Ford Mustang 66">
+													</div>
+													<div class="content-info">
+														<h4 class="prod-title">Ford Mustang 66</h4>
+														<div class="prod-status">
+															<p>2020 / Nuevo / Diesel</p>
+														</div>
+														<p class="price">
+															Venta RD$ 350,000
+														</p>
+													</div>
+												</article>
+											</a>
+											<a href="#" class="prod-link">
+												<article class="car-prod">
+													<div class="img-prod">
+														<img src="/img/ford-mustang.jpg" alt="Ford Mustang 66">
+													</div>
+													<div class="content-info">
+														<h4 class="prod-title">Ford Mustang 66</h4>
+														<div class="prod-status">
+															<p>2020 / Nuevo / Diesel</p>
+														</div>
+														<p class="price">
+															Venta RD$ 350,000
+														</p>
+													</div>
+												</article>
+											</a>
+											<a href="#" class="prod-link">
+												<article class="car-prod">
+													<div class="img-prod">
+														<img src="/img/ford-mustang.jpg" alt="Ford Mustang 66">
+													</div>
+													<div class="content-info">
+														<h4 class="prod-title">Ford Mustang 66</h4>
+														<div class="prod-status">
+															<p>2020 / Nuevo / Diesel</p>
+														</div>
+														<p class="price">
+															Venta RD$ 350,000
+														</p>
+													</div>
+												</article>
+											</a>
+										</div>
+										<div class="pagination-content">
+											<ul class="pagination-list inner-pagination">
+												<li>
+													<a href="#" class="pagination-previous">
+														<i class="fas fa-chevron-left"></i>&#160;Anterior
+													</a>
+												</li>
+												<li>
+													<a href="#" class="pagination-link active">1</a>
+												</li>
+												<li>
+													<a href="#" class="pagination-link">2</a>
+												</li>
+												<li>
+													<a href="#" class="pagination-link">4</a>
+												</li>
+												<li>
+													<a href="#" class="pagination-link">3</a>
+												</li>
+												<li>
+													<a href="#" class="pagination-link">5</a>
+												</li>
+												<li>
+													<a href="#" class="pagination-next">
+														Siguiuiente&#160;<i class="fas fa-chevron-right"></i>
+													</a>
+												</li>
+											</ul>
+										</div>
+				        			</div>
+				        			<div key="2" action="" class="our-service" v-if="activetab === 2">
+				        				<div class="values">
+				        					<div class="value">
+				        						<h4>Experiencia</h4>
+				        						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				        					</div>
+				        					<div class="value">
+				        						<h4>Calidad</h4>
+				        						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				        					</div>
+				        					<div class="value">
+				        						<h4>Garantía</h4>
+				        						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				        					</div>
+				        				</div>
+				        				<div class="services-comp">
+				        					<h3>Nuestros Servicios</h3>
+				        					<div class="service">
+				        						<h4>Traspaso de vehículo de motor</h4>
+				        						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum veritatis aspernatur nisi nam animi ipsum nihil ad quod quasi.</p>
+				        						<p>Requisitos:</p>
+				        						<ul>
+				        							<li>Requisito 1</li>
+				        							<li>Requisito 2</li>
+				        							<li>Requisito 3</li>
+				        							<li>Requisito 4</li>
+				        							<li>Requisito 5</li>
+				        						</ul>
+				        					</div>
+				        					<hr>
+				        					<div class="service">
+				        						<h4>Acto de venta notarial</h4>
+				        						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum veritatis aspernatur nisi nam animi ipsum nihil ad quod quasi.</p>
+				        						<p>Requisitos:</p>
+				        						<ul>
+				        							<li>Requisito 1</li>
+				        							<li>Requisito 2</li>
+				        							<li>Requisito 3</li>
+				        							<li>Requisito 4</li>
+				        							<li>Requisito 5</li>
+				        						</ul>
+				        					</div>
+				        				</div>
+				        			</div>
+				        			<div key="3" action="" class="about-company" v-if="activetab === 3">
+				        				<div class="description">
+				        					<h3>Inmobiliaria Mendez</h3>
+				        					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum harum facere tempore accusantium maxime ut commodi eum distinctio odit consequatur nobis suscipit atque saepe mollitia, aperiam libero voluptatum, tempora autem.</p>
+				        					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum harum facere tempore accusantium maxime ut commodi eum distinctio odit consequatur nobis suscipit atque saepe mollitia, aperiam libero voluptatum, tempora autem.</p>
+				        					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum harum facere tempore accusantium maxime ut commodi eum distinctio odit consequatur nobis suscipit atque saepe mollitia, aperiam libero voluptatum, tempora autem.</p>
+				        					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum harum facere tempore accusantium maxime ut commodi eum distinctio odit consequatur nobis suscipit atque saepe mollitia, aperiam libero voluptatum, tempora autem.</p>
+				        					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum harum facere tempore accusantium maxime ut commodi eum distinctio odit consequatur nobis suscipit atque saepe mollitia, aperiam libero voluptatum, tempora autem.</p>
+				        				</div>
+				        			</div>
+				        			<div key="4" action="" class="contact-comp" v-if="activetab === 4">
+				        				<div class="contact-details">
+				        					<div class="info-comp">
+				        						<ul>
+				        							<li>
+				        								<a href="#" class="link">
+				        									<i class="fas fa-phone-alt"></i> 
+				        									+1 809-000-0000
+				        								</a>
+				        							</li>
+				        							<li>
+				        								<a href="#" class="link">
+				        									<i class="fas fa-phone-alt"></i> 
+				        									+1 809-000-0000
+				        								</a>
+				        							</li>
+				        							<li>
+				        								<a href="#" class="link">
+				        									<i class="fas fa-envelope"></i> 
+				        									+1 809-000-0000
+				        								</a>
+				        							</li>
+				        							<li>
+				        								<span>País: </span>
+				        								Rep. Dom.
+				        							</li>
+				        							<li>
+				        								<span>Provincia: </span>
+				        								La Altagracia
+				        							</li>
+				        							<li>
+				        								<span>Sector: </span>
+				        								Villa Cristal
+				        							</li>
+				        							<li>
+				        								<span>Direción: </span>
+				        								Calle por ahí al lado de algo.
+				        							</li>
+				        						</ul>
+				        					</div>
+				        					<div class="schedule-comp">
+				        						<h4>Horario de Oficina</h4>
+				        						<table class="table">
+				        							<tbody>
+				        								<tr>
+				        									<td>Lunes</td>
+				        									<td>09:00 - 06:00</td>
+				        								</tr>
+				        								<tr>
+				        									<td>Martes</td>
+				        									<td>09:00 - 06:00</td>
+				        								</tr>
+				        								<tr>
+				        									<td>Miércoles</td>
+				        									<td>09:00 - 06:00</td>
+				        								</tr>
+				        								<tr>
+				        									<td>Jueves</td>
+				        									<td>09:00 - 06:00</td>
+				        								</tr>
+				        								<tr>
+				        									<td>Viernes</td>
+				        									<td>09:00 - 06:00</td>
+				        								</tr>
+				        								<tr>
+				        									<td>Sabado</td>
+				        									<td>09:00 - 06:00</td>
+				        								</tr>
+				        								<tr>
+				        									<td>Domingo</td>
+				        									<td>09:00 - 06:00</td>
+				        								</tr>
+				        							</tbody>
+				        						</table>
+				        					</div>
+				        				</div>
+				        				<div class="map">
+				        					<img src="/img/map.jpg" alt="">
+				        				</div>
+				        			</div>
+			        			</transition-group>
+			        		</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer id="main-footer">
+		<div class="container is-fluid footer">
+			<div class="columns">
+				<div class="column">
+					<h3><a href="/">Ir a la Portada</a></h3>
+					<ul>
+						<li>
+							<a class="footer-link" href="#">Políticas del Sitio Web</a>
+						</li>
+						<li>
+							<a class="footer-link" href="#">Términos y Condiciones</a>
+						</li>
+					</ul>
+				</div>
+				<div class="column">
+					<h3>Accesos Rapidos</h3>
+					<ul class="quick-links fa-ul">
+						<li>
+							<span class="fa-li"><i class="fas fa-chevron-right"></i></span>
+							<a href="#" class="item-link">Vehículos</a>
+						</li>
+						<li>
+							<span class="fa-li"><i class="fas fa-chevron-right"></i></span>
+							<a href="#" class="item-link">Inmuebles</a>
+						</li>
+						<li>
+							<span class="fa-li"><i class="fas fa-chevron-right"></i></span>
+							<a href="#" class="item-link">Dealers</a>
+						</li>
+						<li>
+							<span class="fa-li"><i class="fas fa-chevron-right"></i></span>
+							<a href="#" class="item-link">MotoPrestamos</a>
+						</li>
+						<li>
+							<span class="fa-li"><i class="fas fa-chevron-right"></i></span>
+							<a href="#" class="item-link">Inmobiliarias</a>
+						</li>
+						<li>
+							<span class="fa-li"><i class="fas fa-chevron-right"></i></span>
+							<a href="#" class="item-link">RentCars</a>
+						</li>
+						<li>
+							<span class="fa-li"><i class="fas fa-chevron-right"></i></span>
+							<a href="#" class="item-link">Náuticas</a>
+						</li>
+						<li>
+							<span class="fa-li"><i class="fas fa-chevron-right"></i></span>
+							<a href="#" class="item-link">Motoprestamos</a>
+						</li>
+					</ul>
+				</div>
+				<div class="column">
+					<h3><a href="/pages/contacto.html">Detalles de Contacto</a></h3>
+					<ul class="footer-contact fa-ul">
+						<li>
+							<span class="fa-li"><i class="fas fa-phone fa-rotate-90"></i></span>
+							<a href="#" class="item-link">+1 809-000-0000</a>
+						</li>
+						<li>
+							<span class="fa-li"><i class="fas fa-phone fa-rotate-90"></i></span>
+							<a href="#" class="item-link">+1 809-000-0000</a>
+						</li>
+						<li>
+							<span class="fa-li"><i class="fas fa-envelope"></i></span>
+							<a href="mailto:info@empresasjna.com" class="item-link">info@empresasjna.com</a>
+						</li>
+					</ul>
+					<ul class="social-media">
+						<li ><span class="follow-us">Siguenos en: </span></li>
+						<li>
+							<a class="footer-link" href="#">
+								<i class="fab fa-facebook-square"></i>
+							</a>
+						</li>
+						<li>
+							<a class="footer-link" href="#">
+								<i class="fab fa-instagram"></i>
+							</a>
+						</li>
+						<li>
+							<a class="footer-link" href="#">
+								<i class="fab fa-whatsapp"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="copyright-content">
+			<p class="copyright-text">Empresas JNA Copyright © 2020.</p>
+		</div>
+	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script type="text/JavaScript" src="/js/main.js"></script>
+</body>
+</html>

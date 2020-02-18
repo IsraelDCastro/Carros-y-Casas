@@ -307,11 +307,11 @@ hr {
 }
 
 .change-role {
-  padding: 20px 10px;
+  padding: 30px 15px;
   background-color: #007CCC;
   border-radius: 5px;
 }
-.change-role h4, .change-role p {
+.change-role h4, .change-role h5, .change-role p {
   text-align: center;
   color: #FFF;
   margin-bottom: 10px;
@@ -1022,10 +1022,13 @@ hr {
   text-shadow: 0 1px 6px #000;
   font-family: "Lato", sans-serif;
 }
-.profile-sidebar .profile-box .profile-header h3 {
+.profile-sidebar .profile-box .profile-header h3, .profile-sidebar .profile-box .profile-header h4 {
   text-align: center;
-  font-family: "Lato", sans-serif;
   font-weight: 500;
+}
+.profile-sidebar .profile-box .profile-header .slogan {
+  font-weight: 400;
+  text-align: center;
 }
 .profile-sidebar .box-buttons {
   margin-bottom: 30px;
@@ -1119,35 +1122,6 @@ hr {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 30px;
-}
-#profile-content .box-content .profile-content .prod-link {
-  box-shadow: 0 2px 6px #AAA;
-  border-radius: 5px;
-  transition: all 0.3s ease-in-out;
-  color: #000;
-  width: 100%;
-}
-#profile-content .box-content .profile-content .car-prod {
-  border-radius: 5px;
-  overflow: hidden;
-  box-shadow: 0 3px 6px #AAA;
-  transition: all 1s ease;
-}
-#profile-content .box-content .profile-content .car-prod .img-prod {
-  border-radius: 5px;
-  overflow: hidden;
-}
-#profile-content .box-content .profile-content .car-prod .content-info {
-  padding: 10px;
-}
-#profile-content .box-content .profile-content .car-prod .content-info .prod-title {
-  margin-bottom: 5px;
-  font-size: 21px;
-}
-#profile-content .box-content .profile-content .car-prod .content-info p {
-  margin: 0;
-  color: #555;
-  font-size: 14px;
 }
 #profile-content .box-content .profile-content.profile-admin {
   display: flex;
@@ -1392,6 +1366,42 @@ hr {
 #company-profile-content .form-content {
   padding: 0;
   margin-bottom: 30px;
+}
+#company-profile-content .banner-company {
+  width: 100%;
+  height: 50vh;
+  padding: 30px;
+  position: relative;
+  background: url("/img/banner-abstract.jpg");
+}
+#company-profile-content .banner-company .type-company {
+  text-align: right;
+  color: #FFF;
+  text-shadow: 0px 2px 6px #000;
+}
+#company-profile-content .banner-company .upload-image {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  overflow: hidden;
+  width: 70px;
+  height: 70px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 34px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 40px;
+  right: 70px;
+}
+#company-profile-content .banner-company .upload-image .file-input {
+  cursor: pointer;
+}
+#company-profile-content .profile-sidebar {
+  margin: -120px 30px 30px;
+  align-self: flex-start;
+  z-index: 9;
+  background-color: #FFF;
 }
 
 .form-content {
@@ -1696,6 +1706,131 @@ hr {
   display: flex;
   margin-left: auto;
   margin-top: 30px;
+}
+
+.online-product .filter-form {
+  justify-content: flex-end;
+}
+.online-product .profile-prod-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 25px;
+}
+
+.our-service .values {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  margin-bottom: 30px;
+}
+.our-service .values .value {
+  flex: 0 0 30%;
+  text-align: center;
+}
+.our-service .values .value h3 {
+  margin-bottom: 15px;
+}
+.our-service .services-comp {
+  width: 90%;
+  margin: 0 auto;
+}
+.our-service .services-comp h3 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+.our-service .services-comp h3::after {
+  content: " ";
+  display: block;
+  width: 30%;
+  height: 3px;
+  border-radius: 5px;
+  background-color: #222;
+  margin: 0 auto;
+}
+.our-service .services-comp .service {
+  padding: 0 30px;
+}
+.our-service .services-comp .service h4 {
+  margin-bottom: 15px;
+}
+.our-service .services-comp .service ul {
+  margin-left: 30px;
+}
+.our-service .services-comp .service li {
+  list-style-type: disc;
+}
+
+.about-company .description {
+  width: 80%;
+  margin: 0 auto;
+}
+.about-company .description h3 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.contact-comp .contact-details {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+.contact-comp .contact-details .info-comp, .contact-comp .contact-details .schedule-comp {
+  background-color: #007CCC;
+  padding: 30px 20px;
+  color: #FFF;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px #007CCC;
+}
+.contact-comp .contact-details .info-comp ul li {
+  margin-bottom: 10px;
+}
+.contact-comp .contact-details .info-comp ul li a {
+  color: #FFF;
+  transition: all 0.4s ease-in;
+}
+.contact-comp .contact-details .info-comp ul li a:hover {
+  color: #E6B112;
+}
+.contact-comp .contact-details .info-comp ul li span {
+  font-weight: 700;
+}
+.contact-comp .contact-details .schedule-comp h4 {
+  margin-bottom: 15px;
+}
+.contact-comp .contact-details .schedule-comp .table {
+  background-color: transparent;
+  color: #FFF;
+}
+
+.prod-link {
+  box-shadow: 0 2px 6px #AAA;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  color: #000;
+  width: 100%;
+}
+
+.car-prod {
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 3px 6px #AAA;
+  transition: all 1s ease;
+}
+.car-prod .img-prod {
+  border-radius: 5px;
+  overflow: hidden;
+}
+.car-prod .content-info {
+  padding: 10px;
+}
+.car-prod .content-info .prod-title {
+  margin-bottom: 5px;
+  font-size: 21px;
+}
+.car-prod .content-info p {
+  margin: 0;
+  color: #555;
+  font-size: 14px;
 }
 
 /*# sourceMappingURL=main.css.map */

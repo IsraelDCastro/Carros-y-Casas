@@ -43,7 +43,7 @@ const profile = new Vue({
 })
 
 const publish = new Vue({
-	el: '#form-publish',
+	el: '#global-tabs',
 	data: {
 		activetab: 1
 	}
