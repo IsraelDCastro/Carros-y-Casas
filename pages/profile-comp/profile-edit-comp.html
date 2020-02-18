@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Perfil | Carros y Casas</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src="https://kit.fontawesome.com/9aa0e1d6d6.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+	<header>
+		<nav class="navbar is-transparent">
+			<div id="topbar">
+			 	<div class="navbar-brand">
+			    	<a class="navbar-item" href="/">
+				    	<img src="/img/innovacode_wt.png" alt="Empresas JNA.com">
+				    </a>
+				    <div class="navbar-burger burger" data-target="main-navbar">
+				    	<span></span>
+				    	<span></span>
+				    	<span></span>
+				    </div>
+				</div>
+				<div class="topbar-menu">
+					<div class="navbar-end">
+				    	<a class="navbar-item" href="/pages/sale.html">Vender</a>
+				    	<a class="navbar-item" href="/pages/login-register.html">Ingresar</a>
+					</div>
+				</div>
+			</div>
+
+			<div id="main-navbar" class="navbar-menu">
+		    	<div class="navbar-center">
+			    	<a class="navbar-item" href="/">Portada</a>
+		      		<a class="navbar-item" href="/pages/cars.html">Vehiculos</a>
+		         	<a class="navbar-item" href="/pages/real-estate.html">Propiedades</a>
+				    <div class="navbar-item has-dropdown is-hoverable">
+		        		<a class="navbar-link" href="/pages/companies.html">Empresas</a>
+				        <div class="navbar-dropdown is-boxed">
+				         	<a class="navbar-item" href="/pages/companies/dealers.html">Dealers</a>
+				         	<a class="navbar-item" href="/pages/companies/real-estate.html">Inmobiliarias</a>
+				         	<a class="navbar-item" href="/pages/companies/motor.html">Motoprestamos</a>
+				         	<a class="navbar-item" href="/pages/companies/ships.html">Navieras</a>
+				        </div>
+				    </div>
+			    	<a class="navbar-item" href="/pages/contacto.html">Contacto</a>
+		    	</div>
+			</div>
+		</nav>
+	</header>
+	<div id="wrapper">
+		<div id="company-profile-content">
+			<div class="columns">
+				<aside class="column is-12-mobile is-3-desktop profile-sidebar admin-sidebar">
+					<div class="profile-box">
+						<div class="profile-header">
+							<p class="code-id">Código No.: 0001</p>
+							<figure class="profile-img">
+								<img src="/img/profile-img.jpg" alt="Profile Image">
+								<figcaption>Persona</figcaption>
+							</figure>
+							<h3>Irene Mendez</h3>
+						</div>
+						<div class="box-buttons">
+							<a class="button is-primary outline" href="/pages/admin/profile-admin-publish-ad-car.html">Publicar Articulo</a>
+							<a class="button is-primary outline" href="/pages/admin/profile-admin-online-ads.html">Articulos Disponibles</a>
+							<a class="button is-primary outline" href="/pages/admin/profile-admin-sold-ads.html">Articulos Vendidos</a>
+							<a class="button is-primary outline" href="/pages/admin/profile-admin-message.html">Mensajes Entrantes</a>
+							<a class="button is-primary outline" href="/pages/admin/profile-admin-edit.html">Editar Inf. General</a>
+						</div>
+					</div>
+					<div class="change-role">
+						<h4>¿Eres propietario de una empresa?</h4>
+						<p>Regístrala gratis y haz que tu marca e inventario lleguen mas lejos y a mas personas de una forma rápida, segura y sencilla.</p>
+						<a href="/pages/sale.html" class="button is-second">Registrarme</a>
+					</div>
+				</aside>
+				<div class="column admin-content">
+					<div class="profile-content profile-admin">
+						<form class="edit-personal-info-form" action="">
+							<h3>Información Personal</h3>
+							<div class="field">
+								<label for="" class="label">Nombre Completo</label>
+								<div class="control">
+									<input id="" type="text" class="input" placeholder="Su nombre completo">
+								</div>
+							</div>
+							<div class="field">
+								<label for="email" class="label">Email</label>
+								<div class="control">
+									<input id="email" type="email" class="input" placeholder="ejemplo@ejemplo.com">
+								</div>
+							</div>
+							<div class="field">
+								<label for="" class="label">Teléfono</label>
+								<div class="control">
+									<input id="" type="text" class="input" placeholder="(809) 000-0000">
+								</div>
+							</div>
+							<div class="field">
+								<label for="" class="label">Celular 1</label>
+								<div class="control">
+									<input id="" type="text" class="input" placeholder="(809) 000-0000">
+								</div>
+							</div>
+							<div class="field">
+								<label for="" class="label">Celular 2</label>
+								<div class="control">
+									<input id="" type="text" class="input" placeholder="(809) 000-0000">
+								</div>
+							</div>
+							<div class="field">
+								<label for="" class="label">País</label>
+								<div class="control">
+									<input id="" type="text" class="input" placeholder="Escriba su país">
+								</div>
+							</div>
+							<div class="field">
+								<label for="" class="label">Provincia</label>
+								<div class="control">
+									<input id="" type="text" class="input" placeholder="Su provincia">
+								</div>
+							</div>
+							<div class="field">
+								<label for="" class="label">Sector</label>
+								<div class="control">
+									<input id="" type="text" class="input" placeholder="Su sector">
+								</div>
+							</div>
+							<div class="field">
+								<label class="label">Dirección</label>
+								<div class="control">
+									<textarea class="textarea" placeholder="Dirección"></textarea>
+								</div>
+							</div>
+							<button class="button is-primary">
+								Actualizar Información
+							</button>
+						</form>
+						<div id="form-publish" class="column form-content">
+							<ul class="tabs-lists">
+			        			<li class="tab-link">
+			        				<a @click="activetab=1":class="[ activetab === 1 ? 'active' : '' ]">
+			        					Info. sobre la empresa
+			        				</a>
+			        			</li>
+			        			<li class="tab-link">
+			        				<a @click="activetab=2" :class="[ activetab === 2 ? 'active' : '' ]">
+			        					Horario
+			        				</a>
+			        			</li>
+			        			<li class="tab-link">
+			        				<a @click="activetab=3":class="[ activetab === 3 ? 'active' : '' ]">
+			        					Nuestros Servicios
+			        				</a>
+			        			</li>
+			        			<li class="tab-link">
+			        				<a @click="activetab=4" :class="[ activetab === 4 ? 'active' : '' ]">
+			        					Quienes Somos
+			        				</a>
+			        			</li>
+			        		</ul>
+			        		<div class="tabs-content">
+				        		<transition-group name="fade-left">
+				        			<div action="" key="1" class="" v-if="activetab === 1">
+				        				<form class="edit-company-info-form" action="">
+											<div class="field">
+												<label for="" class="label">Nombre de la Empresa</label>
+												<div class="control">
+													<input id="" type="text" class="input" placeholder="Nombre de la empresa">
+												</div>
+											</div>
+											<div class="field">
+												<label for="" class="label">Eslogan</label>
+												<div class="control">
+													<input id="" type="text" class="input" placeholder="Eslogan de la empresa">
+												</div>
+											</div>
+											<div class="field">
+												<label for="email" class="label">Email de la Empresa</label>
+												<div class="control">
+													<input id="email" type="email" class="input" placeholder="ejemplo@ejemplo.com">
+												</div>
+											</div>
+											<div class="field">
+												<label for="" class="label">Página Web</label>
+												<div class="control">
+													<input id="" type="text" class="input" placeholder="www.ejemplo.com">
+												</div>
+											</div>
+											<div class="field">
+												<label for="" class="label">¿A qué se dedica su empresa?</label>
+												<div class="select">
+													<select name="" id="">
+														<option value="">Seleccione una opción</option>
+														<option value="">Dealer</option>
+														<option value="">Motoprestamo</option>
+														<option value="">Inmobiliaria</option>
+														<option value="">Naviera</option>
+													</select>
+												</div>
+											</div>
+											<div class="field">
+												<label for="" class="label">Fax</label>
+												<div class="control">
+													<input id="" type="text" class="input" placeholder="(809) 000-0000">
+												</div>
+											</div>
+											<div class="field">
+												<label for="" class="label">Teléfono #1</label>
+												<div class="control">
+													<input id="" type="text" class="input" placeholder="(809) 000-0000">
+												</div>
+											</div>
+											<div class="field">
+												<label for="" class="label">Teléfono #2</label>
+												<div class="control">
+													<input id="" type="text" class="input" placeholder="(809) 000-0000">
+												</div>
+											</div>
+											<div class="field">
+												<label for="" class="label">Celular #1</label>
+												<div class="control">
+													<input id="" type="text" class="input" placeholder="(809) 000-0000">
+												</div>
+											</div>
+											<div class="field">
+												<label for="" class="label">Celular #2</label>
+												<div class="control">
+													<input id="" type="text" class="input" placeholder="(809) 000-0000">
+												</div>
+											</div>
+											<div class="field">
+												<label for="" class="label">Celular #3</label>
+												<div class="control">
+													<input id="" type="text" class="input" placeholder="(809) 000-0000">
+												</div>
+											</div>
+											<div class="field">
+												<label for="" class="label">Celular #4</label>
+												<div class="control">
+													<input id="" type="text" class="input" placeholder="(809) 000-0000">
+												</div>
+											</div>
+											<div class="field">
+												<label for="" class="label">Celular #5</label>
+												<div class="control">
+													<input id="" type="text" class="input" placeholder="(809) 000-0000">
+												</div>
+											</div>
+											<div class="field">
+												<label for="" class="label">País</label>
+												<div class="control">
+													<input id="" type="text" class="input" placeholder="Escriba su país">
+												</div>
+											</div>
+											<div class="group-field">
+												<div class="fields">
+													<div class="field">
+														<label for="" class="label">Provincia</label>
+														<div class="control">
+															<input id="" type="text" class="input" placeholder="Su provincia">
+														</div>
+													</div>
+													<div class="field">
+														<label for="" class="label">Sector</label>
+														<div class="control">
+															<input id="" type="text" class="input" placeholder="Su sector">
+														</div>
+													</div>
+													<div class="field">
+														<label class="label">Dirección</label>
+														<div class="control">
+															<textarea class="textarea" placeholder="Dirección"></textarea>
+														</div>
+													</div>
+												</div>
+												<div class="field-map">
+													<img src="/img/map-example.jpg" alt="">
+												</div>
+											</div>
+											<button class="button is-primary">
+												Actualizar Información
+											</button>
+										</form>
+				        			</div>
+				        			<div key="2" action="" class="schedule" v-if="activetab === 2">
+				        				<h3>Días y horarios laborables</h3>
+				        				<h5>Por favor, marque solo dos días que laboran.</h5>
+				        				<form action="" class="schedule-form">
+				        					<table class="table is-bordered">
+				        						<thead>
+				        							<tr>
+				        								<th>Días</th>
+				        								<th>Laborable</th>
+				        								<th>Hora de abrir</th>
+				        								<th>Hora de Cierre</th>
+				        							</tr>
+				        						</thead>
+				        						<tbody>
+				        							<tr>
+				        								<td>Lunes</td>
+				        								<td>
+															<div class="field">
+																<div class="control-check">
+																	<input id="monday" class="" type="checkbox" checked>
+								        							<label class="checkbox" for="monday">
+															    		
+															    	</label>
+																</div>
+															</div>
+				        								</td>
+				        								<td>
+				        									<div class="field">
+				        										<div class="control">
+				        											<input type="text" class="input" placeholder="08:00">
+				        										</div>
+				        									</div>
+				        								</td>
+				        								<td>
+				        									<div class="field">
+				        										<div class="control">
+				        											<input type="text" class="input" placeholder="08:00">
+				        										</div>
+				        									</div>
+				        								</td>
+				        							</tr>
+				        							<tr>
+				        								<td>Martes</td>
+				        								<td>
+															<div class="field">
+																<div class="control-check">
+																	<input id="tuesday" class="" type="checkbox" checked>
+								        							<label class="checkbox" for="tuesday"></label>
+																</div>
+															</div>
+				        								</td>
+				        								<td>
+				        									<div class="field">
+				        										<div class="control">
+				        											<input type="text" class="input" placeholder="08:00">
+				        										</div>
+				        									</div>
+				        								</td>
+				        								<td>
+				        									<div class="field">
+				        										<div class="control">
+				        											<input type="text" class="input" placeholder="08:00">
+				        										</div>
+				        									</div>
+				        								</td>
+				        							</tr>
+				        							<tr>
+				        								<td>Miércoles</td>
+				        								<td>
+															<div class="field">
+																<div class="control-check">
+																	<input id="wednesday" class="" type="checkbox">
+								        							<label class="checkbox" for="wednesday"></label>
+																</div>
+															</div>
+				        								</td>
+				        								<td>
+				        									<div class="field">
+				        										<div class="control">
+				        											<input type="text" class="input" placeholder="08:00">
+				        										</div>
+				        									</div>
+				        								</td>
+				        								<td>
+				        									<div class="field">
+				        										<div class="control">
+				        											<input type="text" class="input" placeholder="08:00">
+				        										</div>
+				        									</div>
+				        								</td>
+				        							</tr>
+				        							<tr>
+				        								<td>Jueves</td>
+				        								<td>
+															<div class="field">
+																<div class="control-check">
+																	<input id="thursday" class="" type="checkbox">
+								        							<label class="checkbox" for="thursday"></label>
+																</div>
+															</div>
+				        								</td>
+				        								<td>
+				        									<div class="field">
+				        										<div class="control">
+				        											<input type="text" class="input" placeholder="08:00">
+				        										</div>
+				        									</div>
+				        								</td>
+				        								<td>
+				        									<div class="field">
+				        										<div class="control">
+				        											<input type="text" class="input" placeholder="08:00">
+				        										</div>
+				        									</div>
+				        								</td>
+				        							</tr>
+				        							<tr>
+				        								<td>Viernes</td>
+				        								<td>
+															<div class="field">
+																<div class="control-check">
+																	<input id="friday" class="" type="checkbox">
+								        							<label class="checkbox" for="friday"></label>
+																</div>
+															</div>
+				        								</td>
+				        								<td>
+				        									<div class="field">
+				        										<div class="control">
+				        											<input type="text" class="input" placeholder="08:00">
+				        										</div>
+				        									</div>
+				        								</td>
+				        								<td>
+				        									<div class="field">
+				        										<div class="control">
+				        											<input type="text" class="input" placeholder="08:00">
+				        										</div>
+				        									</div>
+				        								</td>
+				        							</tr>
+				        							<tr>
+				        								<td>Sabado</td>
+				        								<td>
+															<div class="field">
+																<div class="control-check">
+																	<input id="sartuday" class="" type="checkbox">
+								        							<label class="checkbox" for="sartuday"></label>
+																</div>
+															</div>
+				        								</td>
+				        								<td>
+				        									<div class="field">
+				        										<div class="control">
+				        											<input type="text" class="input" placeholder="08:00">
+				        										</div>
+				        									</div>
+				        								</td>
+				        								<td>
+				        									<div class="field">
+				        										<div class="control">
+				        											<input type="text" class="input" placeholder="08:00">
+				        										</div>
+				        									</div>
+				        								</td>
+				        							</tr>
+				        							<tr>
+				        								<td>Domingo</td>
+				        								<td>
+															<div class="field">
+																<div class="control-check">
+																	<input id="sunday" class="" type="checkbox">
+								        							<label class="checkbox" for="sunday"></label>
+																</div>
+															</div>
+				        								</td>
+				        								<td>
+				        									<div class="field">
+				        										<div class="control">
+				        											<input type="text" class="input" placeholder="08:00">
+				        										</div>
+				        									</div>
+				        								</td>
+				        								<td>
+				        									<div class="field">
+				        										<div class="control">
+				        											<input type="text" class="input" placeholder="08:00">
+				        										</div>
+				        									</div>
+				        								</td>
+				        							</tr>
+				        						</tbody>
+				        					</table>
+				        					<div class="field note">
+				        						<label class="label" for="">Nota Especial</label>
+				        						<div class="control">
+				        							<textarea name="" id=""class="textarea note-schedule-field" placeholder="Escriba notas importantes sobre el horario, si laboran días festivos, cuales y si hay alguna excepción."></textarea>
+				        						</div>
+				        					</div>
+				        					<button class="button is-primary">
+												Actualizar Horario
+											</button>
+				        				</form>
+				        			</div>
+				        			<div key="3" action="" class="services" v-if="activetab === 3">
+				        				<h3>Nuestros Servicios</h3>
+				        				<form action="" class="form-service">
+				        					<div class="fields">
+					        					<div class="field">
+					        						<label for="" class="label">Experiencia</label>
+					        						<div class="control">
+					        							<textarea id="" class="textarea" placeholder="Experiencia"></textarea>
+					        						</div>
+					        					</div>
+					        					<div class="field">
+					        						<label for="" class="label">Calidad</label>
+					        						<div class="control">
+					        							<textarea id="" class="textarea" placeholder="Calidad"></textarea>
+					        						</div>
+					        					</div>
+					        					<div class="field">
+					        						<label for="" class="label">Garantía</label>
+					        						<div class="control">
+					        							<textarea id="" class="textarea" placeholder="Garantía"></textarea>
+					        						</div>
+					        					</div>
+				        					</div>
+				        					<hr>
+				        					<div class="field">
+				        						<label for="" class="label">Servicio</label>
+				        						<div class="control">
+				        							<input type="text" class="input" placeholder="Título del servicio">
+				        						</div>
+				        					</div>
+				        					<div class="field">
+				        						<label for="" class="label">Descripción del Servicio</label>
+				        						<div class="control">
+				        							<textarea id="" class="textarea" placeholder="Por favor añada una descripción para el servicio"></textarea>
+				        						</div>
+				        					</div>
+				        					<div class="buttons">
+				        						<button class="button is-pending">Añadir Servicio &nbsp; <i class="fas fa-plus"></i></button>
+				        						<button class="button is-primary">Actualizar Información</button>
+				        					</div>
+				        				</form>
+				        			</div>
+				        			<div key="4" action="" class="about-us" v-if="activetab === 4">
+				        				<h3>Describa la historioa de la empresa</h3>
+				        				<form action="" class="form-about">
+				        					<div class="field">
+				        						<div class="control">
+				        							<textarea class="textarea" placeholder="Por favor, cuéntele a sus visitantes sobre su historia empresarial."></textarea>
+				        						</div>
+				        					</div>
+				        					<button class="button is-primary">
+				        						Actualizar Información
+				        					</button>
+				        				</form>
+				        			</div>
+			        			</transition-group>
+			        		</div>
+						</div>
+						<form class="edit-password-form" action="">
+							<h3>Cambiar Contraseña</h3>
+							<div class="field">
+								<label for="" class="label">Contraseña actual</label>
+								<div class="control">
+									<input id="" type="password" class="input" placeholder="Contraseña actual">
+								</div>
+							</div>
+							<div class="field">
+								<label for="" class="label">Contraseña nueva</label>
+								<div class="control">
+									<input id="" type="password" class="input" placeholder="Contraseña nueva">
+								</div>
+							</div>
+							<div class="field">
+								<label for="" class="label">Confirmar contraseña nueva</label>
+								<div class="control">
+									<input id="" type="password" class="input" placeholder="Confirmar contraseña nueva">
+								</div>
+							</div>
+							<button class="button is-primary">
+								Cambiar Contraseña
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer id="main-footer">
+		<div class="container is-fluid footer">
+			<div class="columns">
+				<div class="column">
+					<h3><a href="/">Ir a la Portada</a></h3>
+					<ul>
+						<li>
+							<a class="footer-link" href="#">Políticas del Sitio Web</a>
+						</li>
+						<li>
+							<a class="footer-link" href="#">Términos y Condiciones</a>
+						</li>
+					</ul>
+				</div>
+				<div class="column">
+					<h3>Accesos Rapidos</h3>
+					<ul class="quick-links fa-ul">
+						<li>
+							<span class="fa-li"><i class="fas fa-chevron-right"></i></span>
+							<a href="#" class="item-link">Vehículos</a>
+						</li>
+						<li>
+							<span class="fa-li"><i class="fas fa-chevron-right"></i></span>
+							<a href="#" class="item-link">Inmuebles</a>
+						</li>
+						<li>
+							<span class="fa-li"><i class="fas fa-chevron-right"></i></span>
+							<a href="#" class="item-link">Dealers</a>
+						</li>
+						<li>
+							<span class="fa-li"><i class="fas fa-chevron-right"></i></span>
+							<a href="#" class="item-link">MotoPrestamos</a>
+						</li>
+						<li>
+							<span class="fa-li"><i class="fas fa-chevron-right"></i></span>
+							<a href="#" class="item-link">Inmobiliarias</a>
+						</li>
+						<li>
+							<span class="fa-li"><i class="fas fa-chevron-right"></i></span>
+							<a href="#" class="item-link">RentCars</a>
+						</li>
+						<li>
+							<span class="fa-li"><i class="fas fa-chevron-right"></i></span>
+							<a href="#" class="item-link">Náuticas</a>
+						</li>
+						<li>
+							<span class="fa-li"><i class="fas fa-chevron-right"></i></span>
+							<a href="#" class="item-link">Motoprestamos</a>
+						</li>
+					</ul>
+				</div>
+				<div class="column">
+					<h3><a href="/pages/contacto.html">Detalles de Contacto</a></h3>
+					<ul class="footer-contact fa-ul">
+						<li>
+							<span class="fa-li"><i class="fas fa-phone fa-rotate-90"></i></span>
+							<a href="#" class="item-link">+1 809-000-0000</a>
+						</li>
+						<li>
+							<span class="fa-li"><i class="fas fa-phone fa-rotate-90"></i></span>
+							<a href="#" class="item-link">+1 809-000-0000</a>
+						</li>
+						<li>
+							<span class="fa-li"><i class="fas fa-envelope"></i></span>
+							<a href="mailto:info@empresasjna.com" class="item-link">info@empresasjna.com</a>
+						</li>
+					</ul>
+					<ul class="social-media">
+						<li ><span class="follow-us">Siguenos en: </span></li>
+						<li>
+							<a class="footer-link" href="#">
+								<i class="fab fa-facebook-square"></i>
+							</a>
+						</li>
+						<li>
+							<a class="footer-link" href="#">
+								<i class="fab fa-instagram"></i>
+							</a>
+						</li>
+						<li>
+							<a class="footer-link" href="#">
+								<i class="fab fa-whatsapp"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="copyright-content">
+			<p class="copyright-text">Empresas JNA Copyright © 2020.</p>
+		</div>
+	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script type="text/JavaScript" src="/js/main.js"></script>
+</body>
+</html>

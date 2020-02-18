@@ -1069,8 +1069,7 @@ hr {
   margin: 60px 30px;
   padding: 0;
 }
-
-.edit-personal-info-form, .edit-password-form {
+.admin-content .edit-personal-info-form, .admin-content .edit-password-form {
   padding: 30px 20px;
   box-shadow: 0 0 12px #AAA;
   border-radius: 5px;
@@ -1078,34 +1077,32 @@ hr {
   flex-flow: row wrap;
   justify-content: space-between;
 }
-
-.edit-personal-info-form {
+.admin-content .edit-personal-info-form {
   margin-bottom: 30px;
 }
-.edit-personal-info-form h3 {
+.admin-content .edit-personal-info-form h3 {
   margin-bottom: 15px;
   flex: 0 0 100%;
 }
-.edit-personal-info-form .field {
+.admin-content .edit-personal-info-form .field {
   flex: 0 0 46%;
 }
-.edit-personal-info-form .field .textarea {
+.admin-content .edit-personal-info-form .field .textarea {
   min-height: 4em;
   resize: none;
 }
-.edit-personal-info-form button {
+.admin-content .edit-personal-info-form button {
   align-self: flex-end;
   margin-bottom: 15px;
 }
-
-.edit-password-form h3 {
+.admin-content .edit-password-form h3 {
   flex: 0 0 100%;
   margin-bottom: 15px;
 }
-.edit-password-form .field {
+.admin-content .edit-password-form .field {
   flex: 0 0 30%;
 }
-.edit-password-form button {
+.admin-content .edit-password-form button {
   margin-left: auto;
 }
 
@@ -1198,197 +1195,6 @@ hr {
 }
 #profile-content .form-content {
   padding: 60px 30px;
-}
-#profile-content .form-content .tabs-lists {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  overflow: hidden;
-}
-#profile-content .form-content .tabs-lists .tab-link {
-  flex: 1;
-  text-align: center;
-  border-radius: 5px;
-}
-#profile-content .form-content .tabs-lists .tab-link a {
-  display: block;
-  padding: 20px;
-  font-size: 18px;
-  font-weight: 500;
-  border-radius: 0;
-  transition: all 0.3s ease-in-out;
-  color: #222;
-  background-color: #F2F2F2;
-  position: relative;
-}
-#profile-content .form-content .tabs-lists .tab-link a.active, #profile-content .form-content .tabs-lists .tab-link a:hover {
-  color: #007CCC;
-  background-color: #FFF;
-  border-top: 5px solid #007CCC;
-  font-weight: 700;
-}
-#profile-content .form-content .tabs-content {
-  padding: 20px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  box-shadow: 0 3px 10px #AAA;
-}
-#profile-content .form-content .tabs-content .form-detail {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-#profile-content .form-content .tabs-content .form-detail > .field,
-#profile-content .form-content .tabs-content .form-detail > .double-field,
-#profile-content .form-content .tabs-content .form-detail .double-field .field {
-  flex: 0 0 48%;
-}
-#profile-content .form-content .tabs-content .form-detail .field .select,
-#profile-content .form-content .tabs-content .form-detail .field select {
-  width: 100%;
-}
-#profile-content .form-content .tabs-content .form-detail .double-field {
-  display: flex;
-  justify-content: space-between;
-  flex-flow: row wrap;
-}
-#profile-content .form-content .tabs-content .form-detail .field-description {
-  flex: 0 0 100%;
-}
-#profile-content .form-content .tabs-content .form-detail .field-description textarea {
-  resize: none;
-}
-#profile-content .form-content .tabs-content .form-detail .price-field .control {
-  display: flex;
-}
-#profile-content .form-content .tabs-content .form-detail .price-field .control .currency {
-  display: inline-block;
-  width: auto;
-  height: 40px;
-  background-color: #F2F2F2;
-  border-radius: 0;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  font-size: 16px;
-}
-#profile-content .form-content .tabs-content .form-detail .price-field .control #price {
-  width: auto;
-  margin: 0;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  flex: 1;
-}
-#profile-content .form-content .tabs-content .feature .check-content input {
-  position: absolute;
-  opacity: 0;
-}
-#profile-content .form-content .tabs-content .feature .check-content label.checkbox::before {
-  content: "";
-  display: inline-block;
-  padding: 8px;
-  border-radius: 2px;
-  vertical-align: middle;
-  transition: all 0.3s ease-in;
-  box-shadow: 0 0 3px #AAA;
-  margin-right: 5px;
-}
-#profile-content .form-content .tabs-content .feature .check-content input:checked + .checkbox::after {
-  content: "";
-  display: inline-block;
-  font-weight: 700;
-  font-family: "Font Awesome 5 Pro";
-  position: absolute;
-  right: 0px;
-  left: 2px;
-  top: 0px;
-  color: #009541;
-}
-#profile-content .form-content .tabs-content .feature .check-content input:checked + label.checkbox::before {
-  background-color: #F2F2F2;
-}
-#profile-content .form-content .tabs-content .feature .security-checkboxes {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-}
-#profile-content .form-content .tabs-content .feature .box-checkboxes {
-  margin-bottom: 30px;
-}
-#profile-content .form-content .tabs-content .feature h3 {
-  margin-bottom: 15px;
-}
-#profile-content .form-content .tabs-content .other-features h5 {
-  margin-bottom: 10px;
-}
-#profile-content .form-content .tabs-content .other-features .new-feature {
-  display: flex;
-  justify-content: flex-start;
-}
-#profile-content .form-content .tabs-content .other-features .new-feature .field {
-  flex: 0 0 35%;
-  margin-right: 30px;
-}
-#profile-content .form-content .tabs-content .other-features .new-feature .field .control {
-  margin-bottom: 10px;
-}
-#profile-content .form-content .tabs-content .other-features .new-feature .field a.button.is-primary {
-  display: inline-block;
-}
-#profile-content .form-content .tabs-content .other-features .new-feature .feature-list {
-  flex: 1;
-}
-#profile-content .form-content .tabs-content .other-features .new-feature .feature-list ul {
-  list-style: disc;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 5px;
-}
-#profile-content .form-content .tabs-content .other-features .new-feature .feature-list .delete-feture {
-  color: #222;
-  margin-left: 10px;
-  display: inline-block;
-  transition: all 0.3s ease-in;
-  font-size: 18px;
-}
-#profile-content .form-content .tabs-content .other-features .new-feature .feature-list .delete-feture:hover {
-  color: #F80000;
-}
-#profile-content .form-content .tabs-content .pubish-direction {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-}
-#profile-content .form-content .tabs-content .pubish-direction .fields {
-  flex: 0 0 48%;
-}
-#profile-content .form-content .tabs-content .pubish-direction .select, #profile-content .form-content .tabs-content .pubish-direction select {
-  width: 100%;
-}
-#profile-content .form-content .tabs-content .pubish-direction .map {
-  flex: 0 0 48%;
-}
-#profile-content .form-content .tabs-content .pubish-direction button.button.is-primary {
-  margin-left: auto;
-  margin-top: 20px;
-}
-#profile-content .form-content .fade-left-enter-active {
-  transition: all 0.3s ease-in-out 0.7s;
-}
-#profile-content .form-content .fade-left-leave-active {
-  transition: all 0.3s ease-in-out 0.3s;
-}
-#profile-content .form-content .fade-left-enter {
-  height: 0;
-  transform: translateX(30px);
-  opacity: 0;
-}
-#profile-content .form-content .fade-left-leave-to {
-  height: 0;
-  transform: translateX(30px);
-  opacity: 0;
 }
 
 #message {
@@ -1562,5 +1368,334 @@ hr {
 }
 
 /****** Reset Password End ******/
+/****** Global ******/
+.fade-left-enter-active {
+  transition: all 0.3s ease-in-out 0.7s;
+}
+
+.fade-left-leave-active {
+  transition: all 0.3s ease-in-out 0.3s;
+}
+
+.fade-left-enter {
+  height: 0;
+  transform: translateX(30px);
+  opacity: 0;
+}
+
+.fade-left-leave-to {
+  height: 0;
+  transform: translateX(30px);
+  opacity: 0;
+}
+
+#company-profile-content .form-content {
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.form-content {
+  padding: 60px 30px;
+}
+.form-content .tabs-lists {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  overflow: hidden;
+}
+.form-content .tabs-lists .tab-link {
+  flex: 1;
+  text-align: center;
+  border-radius: 5px;
+}
+.form-content .tabs-lists .tab-link a {
+  display: block;
+  padding: 20px 10px;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 0;
+  transition: all 0.3s ease-in-out;
+  color: #222;
+  background-color: #F2F2F2;
+  position: relative;
+}
+.form-content .tabs-lists .tab-link a.active, .form-content .tabs-lists .tab-link a:hover {
+  color: #007CCC;
+  background-color: #FFF;
+  border-top: 5px solid #007CCC;
+  font-weight: 700;
+}
+.form-content .tabs-content {
+  padding: 20px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 0 3px 10px #AAA;
+}
+.form-content .tabs-content .form-detail {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.form-content .tabs-content .form-detail > .field,
+.form-content .tabs-content .form-detail > .double-field,
+.form-content .tabs-content .form-detail .double-field .field {
+  flex: 0 0 48%;
+}
+.form-content .tabs-content .form-detail .field .select,
+.form-content .tabs-content .form-detail .field select {
+  width: 100%;
+}
+.form-content .tabs-content .form-detail .double-field {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+.form-content .tabs-content .form-detail .field-description {
+  flex: 0 0 100%;
+}
+.form-content .tabs-content .form-detail .field-description textarea {
+  resize: none;
+}
+.form-content .tabs-content .form-detail .price-field .control {
+  display: flex;
+}
+.form-content .tabs-content .form-detail .price-field .control .currency {
+  display: inline-block;
+  width: auto;
+  height: 40px;
+  background-color: #F2F2F2;
+  border-radius: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  font-size: 16px;
+}
+.form-content .tabs-content .form-detail .price-field .control #price {
+  width: auto;
+  margin: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  flex: 1;
+}
+.form-content .tabs-content .feature .check-content input {
+  position: absolute;
+  opacity: 0;
+}
+.form-content .tabs-content .feature .check-content label.checkbox::before {
+  content: "";
+  display: inline-block;
+  padding: 8px;
+  border-radius: 2px;
+  vertical-align: middle;
+  transition: all 0.3s ease-in;
+  box-shadow: 0 0 3px #AAA;
+  margin-right: 5px;
+}
+.form-content .tabs-content .feature .check-content input:checked + .checkbox::after {
+  content: "";
+  display: inline-block;
+  font-weight: 700;
+  font-family: "Font Awesome 5 Pro";
+  position: absolute;
+  right: 0px;
+  left: 2px;
+  top: 0px;
+  color: #009541;
+}
+.form-content .tabs-content .feature .check-content input:checked + label.checkbox::before {
+  background-color: #F2F2F2;
+}
+.form-content .tabs-content .feature .security-checkboxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+.form-content .tabs-content .feature .box-checkboxes {
+  margin-bottom: 30px;
+}
+.form-content .tabs-content .feature h3 {
+  margin-bottom: 15px;
+}
+.form-content .tabs-content .other-features h5 {
+  margin-bottom: 10px;
+}
+.form-content .tabs-content .other-features .new-feature {
+  display: flex;
+  justify-content: flex-start;
+}
+.form-content .tabs-content .other-features .new-feature .field {
+  flex: 0 0 35%;
+  margin-right: 30px;
+}
+.form-content .tabs-content .other-features .new-feature .field .control {
+  margin-bottom: 10px;
+}
+.form-content .tabs-content .other-features .new-feature .field a.button.is-primary {
+  display: inline-block;
+}
+.form-content .tabs-content .other-features .new-feature .feature-list {
+  flex: 1;
+}
+.form-content .tabs-content .other-features .new-feature .feature-list ul {
+  list-style: disc;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5px;
+}
+.form-content .tabs-content .other-features .new-feature .feature-list .delete-feture {
+  color: #222;
+  margin-left: 10px;
+  display: inline-block;
+  transition: all 0.3s ease-in;
+  font-size: 18px;
+}
+.form-content .tabs-content .other-features .new-feature .feature-list .delete-feture:hover {
+  color: #F80000;
+}
+.form-content .tabs-content .pubish-direction {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.form-content .tabs-content .pubish-direction .fields {
+  flex: 0 0 48%;
+}
+.form-content .tabs-content .pubish-direction .select, .form-content .tabs-content .pubish-direction select {
+  width: 100%;
+}
+.form-content .tabs-content .pubish-direction .map {
+  flex: 0 0 48%;
+}
+.form-content .tabs-content .pubish-direction button.button.is-primary {
+  margin-left: auto;
+  margin-top: 20px;
+}
+.form-content .tabs-content .edit-company-info-form {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.form-content .tabs-content .edit-company-info-form h3 {
+  margin-bottom: 15px;
+  flex: 0 0 100%;
+}
+.form-content .tabs-content .edit-company-info-form .field {
+  flex: 0 0 46%;
+}
+.form-content .tabs-content .edit-company-info-form .field .textarea {
+  min-height: 4em;
+  resize: none;
+}
+.form-content .tabs-content .edit-company-info-form .group-field {
+  display: flex;
+  justify-content: space-between;
+  flex: 1 0 100%;
+}
+.form-content .tabs-content .edit-company-info-form .group-field .fields,
+.form-content .tabs-content .edit-company-info-form .group-field .field-map {
+  flex: 0 0 46%;
+  width: 50%;
+}
+.form-content .tabs-content .edit-company-info-form button {
+  align-self: flex-end;
+  margin-bottom: 15px;
+  margin-left: auto;
+}
+.form-content .tabs-content .schedule h3 {
+  margin-bottom: 10px;
+}
+.form-content .tabs-content .schedule h5 {
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+.form-content .tabs-content .schedule .schedule-form table {
+  border-radius: 5px;
+}
+.form-content .tabs-content .schedule .schedule-form table thead th {
+  font-size: 20px;
+  padding: 10px 20px;
+  text-align: center;
+}
+.form-content .tabs-content .schedule .schedule-form table tbody td {
+  vertical-align: middle;
+  text-align: center;
+  padding: 10px;
+}
+.form-content .tabs-content .schedule .schedule-form table tbody td .control {
+  width: 40%;
+  margin: 0 auto;
+}
+.form-content .tabs-content .schedule .schedule-form table tbody td .control .input {
+  height: 34px;
+}
+.form-content .tabs-content .schedule .schedule-form .control-check input {
+  position: absolute;
+  opacity: 0;
+}
+.form-content .tabs-content .schedule .schedule-form .control-check label.checkbox::before {
+  content: "";
+  display: inline-block;
+  padding: 8px;
+  border-radius: 2px;
+  vertical-align: middle;
+  transition: all 0.3s ease-in;
+  box-shadow: 0 0 6px #AAA;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+.form-content .tabs-content .schedule .schedule-form .control-check input:checked + .checkbox::after {
+  content: "";
+  display: inline-block;
+  font-weight: 700;
+  font-family: "Font Awesome 5 Pro";
+  position: absolute;
+  right: 0px;
+  left: 2px;
+  top: 0px;
+  color: #009541;
+}
+.form-content .tabs-content .schedule .schedule-form .control-check input:checked + label.checkbox::before {
+  background-color: #F2F2F2;
+}
+.form-content .tabs-content .schedule .schedule-form .note {
+  margin-bottom: 30px;
+}
+.form-content .tabs-content .schedule .schedule-form .note .control {
+  width: 70%;
+}
+.form-content .tabs-content .schedule .schedule-form .note .note-schedule-field {
+  resize: none;
+}
+.form-content .tabs-content .services h3 {
+  margin-bottom: 20px;
+}
+.form-content .tabs-content .services .form-service .fields {
+  display: flex;
+  justify-content: space-between;
+}
+.form-content .tabs-content .services .form-service .fields .field {
+  flex: 0 0 30%;
+}
+.form-content .tabs-content .services .form-service .textarea {
+  resize: none;
+}
+.form-content .tabs-content .services .form-service .buttons {
+  margin-top: 30px;
+  justify-content: space-between;
+}
+.form-content .tabs-content .about-us h3 {
+  margin-bottom: 30px;
+}
+.form-content .tabs-content .about-us .form-about .textarea {
+  resize: none;
+}
+.form-content .tabs-content .about-us .form-about button {
+  display: flex;
+  margin-left: auto;
+  margin-top: 30px;
+}
 
 /*# sourceMappingURL=main.css.map */
