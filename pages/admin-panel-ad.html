@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vehículos | Carros y Casas</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src="https://kit.fontawesome.com/9aa0e1d6d6.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" href="/css/table.css">
+</head>
+<body>
+	<header>
+		<nav class="navbar is-transparent">
+			<div class="navbar-brand">
+			    <a class="navbar-item" href="https://bulma.io">
+			    	<img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+			    </a>
+			    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+			    	<span aria-hidden="true"></span>
+			    	<span aria-hidden="true"></span>
+			    	<span aria-hidden="true"></span>
+			    </a>
+			</div>
+			<div id="main-navbar" class="navbar-menu">
+		    	<div class="navbar-end">
+				    <div class="navbar-item has-dropdown is-hoverable">
+		        		<a class="navbar-link" href="/pages/companies.html">
+		        			<figure class="image is-48x48 m-r-5 hide-sm">
+                                <img src="/img/img-user.png" alt="" class="rounded">
+                            </figure>
+                            Israel De Castro
+		        		</a>
+				        <div class="navbar-dropdown is-boxed">
+				         	<a class="navbar-item" href="/pages/companies/dealers.html">Dealers</a>
+				         	<a class="navbar-item" href="/pages/companies/real-estate.html">Inmobiliarias</a>
+				         	<a class="navbar-item" href="/pages/companies/motor.html">Motoprestamos</a>
+				         	<a class="navbar-item" href="/pages/companies/ships.html">Navieras</a>
+				        </div>
+				    </div>
+		    	</div>
+			</div>
+		</nav>
+	</header>
+	<div id="admin-panel">
+		<!-- <div class="container is-fluid"> -->
+			<div class="columns">
+				<aside class="column is-10-mobile is-2-desktop admin-panel-sidebar">
+					<div class="sidebar">
+						<h3>Dashboard</h3>
+						<hr>
+						<ul class="nav-sidebar">
+							<li>
+								<a href="#" class="side-link">
+									<span>
+										<i class="fas fa-home"></i>
+									</span>
+									Inicio
+								</a>
+							</li>
+							<li>
+								<a href="/pages/admin-panel-ad.html" class="side-link">
+									<span>
+										<i class="fas fa-boxes"></i>
+									</span>
+									Anuncios
+								</a>
+							</li>
+							<li>
+								<a href="/pages/admin-panel-user.html" class="side-link">
+									<span>
+										<i class="fas fa-users"></i>
+									</span>
+									Usuarios
+								</a>
+							</li>
+						</ul>
+					</div>
+				</aside>
+				<div class="column is-10-mobile is-9-desktop admin-panel-content m-auto">
+					<div class="filter-content">
+						<form action="" class="table-filter-form">
+							<div class="field">
+								<div class="control">
+									<input type="text" class="input" placeholder="Buscar por nombre o # de código">
+								</div>
+							</div>
+							<div class="field">
+								<div class="select">
+									<select name="select-view" class="select-view" id="">
+										<option value="Default">Por Defecto</option>
+										<option value="A to Z">A a Z</option>
+										<option value="Z to A">Z a A</option>
+									</select>
+								</div>
+							</div>
+							<div class="field">
+								<div class="select">
+									<select name="select-view" class="select-view" id="">
+										<option value="">Todas las Categorías</option>
+										<option value="">Auto</option>
+										<option value="">Barco</option>
+									</select>
+								</div>
+							</div>
+							<div class="field">
+								<div class="select">
+									<select name="select-view" class="select-view" id="">
+										<option value="">Todos los Estados</option>
+										<option value="">Activo</option>
+										<option value="">Desactivado</option>
+									</select>
+								</div>
+							</div>
+							<div class="quantify">
+								<p>Articulos: <span class="tag is-primary">3</span></p>
+							</div>
+						</form>
+					</div>
+					<hr>
+					<div class="table-container">
+						<table class="table is-bordered">
+							<thead>
+								<tr>
+									<th>#</th>
+									<th>Nombre / Título</th>
+									<th>Categoría</th>
+									<th>Fecha</th>
+									<th>Estado</th>
+									<th>Dueño</th>
+									<th>Actions</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td class="name">Ford Mustang 66 <span>No.: 01</span></td>
+									<td>Auto</td>
+									<td>22/01/2020</td>
+									<td>
+										<span class="status on-sale">
+											Activo
+										</span>
+									</td>
+									<td>Israel De Castro</td>
+									<td>
+										<button class="button is-primary"><i class="far fa-edit"></i></button>
+										<button class="button is-pending"><i class="far fa-eye-slash"></i></button>
+										<button class="button is-deleted outline"><i class="fas fa-trash-alt"></i></button>
+									</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td class="name">Ford Mustang 66 <span>No.: 02</span></td>
+									<td>Auto</td>
+									<td>22/01/2020</td>
+									<td>
+										<span class="status pending">
+											Desactivado
+										</span>
+									</td>
+									<td>Israel De Castro</td>
+									<td>
+										<button class="button is-primary"><i class="far fa-edit"></i></button>
+										<button class="button is-light"><i class="far fa-eye"></i></button>
+										<button class="button is-deleted outline"><i class="fas fa-trash-alt"></i></button>
+									</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td class="name">Ford Mustang 66 <span>No.: 03</span></td>
+									<td>Auto</td>
+									<td>22/01/2020</td>
+									<td>
+										<span class="status on-sale">
+											Activo
+										</span>
+									</td>
+									<td>Israel De Castro</td>
+									<td>
+										<button class="button is-primary"><i class="far fa-edit"></i></button>
+										<button class="button is-pending"><i class="far fa-eye-slash"></i></button>
+										<button class="button is-deleted outline"><i class="fas fa-trash-alt"></i></button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		<!-- </div> -->
+	</div>
+</body>
+</html>

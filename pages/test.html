@@ -1,0 +1,24 @@
+<div id="algo">
+	<p>Resize me! Current width is: {{ windowWidth }}</p>
+	change {{ mobileShowSearch }}
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+	const app = new Vue({
+		el: "#algo",
+		data: {
+			windowWidth: window.innerWidth,
+		},
+		mounted() {
+		    window.onresize = () => {
+		        this.windowWidth = window.innerWidth
+		     }
+		},
+		computed: {
+		    mobileShowSearch() {
+		    	return this.windowWidth <= 767
+		    }
+		}
+	})
+</script>

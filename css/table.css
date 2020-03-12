@@ -1,0 +1,76 @@
+#admin-panel {
+  background-color: #F8F8F8;
+}
+
+.admin-panel-sidebar {
+  padding: 60px 30px;
+  background-color: #FFF;
+  box-shadow: 4px 0 20px #EDEDED;
+}
+
+.admin-panel-content {
+  padding: 60px 0;
+}
+
+.table-filter-form {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+.table-filter-form .field:not(:last-child) {
+  margin-bottom: 0;
+  margin-right: 10px;
+}
+.table-filter-form .quantify {
+  flex: 1;
+  text-align: right;
+}
+
+.table {
+  width: 100%;
+}
+.table thead {
+  background-color: #007CCC;
+}
+.table thead tr th {
+  text-align: center;
+  color: #FFF;
+}
+.table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+.table tbody tr td {
+  vertical-align: middle;
+  padding: 10px;
+}
+.table tbody tr .name {
+  text-align: left;
+}
+.table tbody tr .name span {
+  display: block;
+  font-size: 14px;
+  color: #555;
+}
+.table tbody tr .button {
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.nav-sidebar .side-link {
+  font-size: 18px;
+  padding: 10px;
+  display: block;
+  color: #222;
+  border-radius: 0;
+  transition: a;
+  transition: all 0.3s ease-in-out;
+}
+.nav-sidebar .side-link span {
+  margin-right: 10px;
+}
+.nav-sidebar .side-link:hover {
+  background-color: #007CCC;
+  color: #FFF;
+}
+
+/*# sourceMappingURL=table.css.map */

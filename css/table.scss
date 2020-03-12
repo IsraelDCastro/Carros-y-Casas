@@ -1,0 +1,81 @@
+#admin-panel {
+    background-color: #F8F8F8;
+}
+
+.admin-panel-sidebar {
+    padding: 60px 30px;
+    background-color: #FFF;
+    box-shadow: 4px 0 20px #EDEDED;
+}
+
+.admin-panel-content {
+    padding: 60px 0;
+}
+
+.table-filter-form {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    .field:not(:last-child) {
+        margin-bottom: 0;
+        margin-right: 10px;
+    }
+    .quantify {
+        flex: 1;
+        text-align: right;
+    }
+}
+
+.table {
+    width: 100%;
+    thead {
+        background-color: #007CCC;
+        tr th {
+            text-align: center;
+            color: #FFF;
+        }
+    }
+    tbody {
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr {
+            td {
+                // text-align: center;
+                vertical-align: middle;
+                padding: 10px;
+            }
+            .name {
+                text-align: left;
+                span {
+                    display: block;
+                    font-size: 14px;
+                    color: #555;
+                }
+            }
+            .button {
+                padding: 5px 10px;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.nav-sidebar {
+    .side-link {
+        font-size: 18px;
+        padding: 10px;
+        display: block;
+        color: #222;
+        border-radius: 0;
+        transition: a;
+        transition: all .3s ease-in-out;
+        span {
+            margin-right: 10px;
+        }
+        &:hover {
+            background-color: #007CCC;
+            color: #FFF;
+        }
+    }
+}

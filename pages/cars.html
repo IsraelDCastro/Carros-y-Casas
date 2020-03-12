@@ -49,11 +49,17 @@
 		</nav>
 	</header>
 	<div id="wrapper">
-
 		<div id="products-content">
 			<div class="columns">
 				<aside class="column is-12-mobile is-3-desktop box-sidebar">
-					<div class="form-sidebar">
+					<div v-if="mobileShowSearch" class="inner-search">
+						<h3>Buscador</h3>
+						<button class="search-button button" @click="show()">
+							<i class="fas fa-search"></i>
+							Cambiar
+						</button>
+					</div>
+					<div v-if="formSidebar" class="form-sidebar">
 						<h3>Buscador</h3>
 						<form class="search-sidebar-form">
 							<div class="field">
@@ -146,7 +152,7 @@
 									    </select>
 									</div>
 								</div>
-								<a class="advanced-search button is-primary outline" @click="advancedSearchShow().prevent">
+								<a class="advanced-search button is-primary outline" @click="advancedSearchShow()">
 									<i class="fas fa-plus"></i>
 									Busqueda Avanzada
 								</a>
@@ -253,7 +259,7 @@
 									    </select>
 									</div>
 								</div>
-								<a class="advanced-search button is-primary outline" @click="advancedSearchShow().prevent">
+								<a class="advanced-search button is-primary outline" @click="advancedSearchShow()">
 									<i class="fas fa-plus"></i>
 									Busqueda Avanzada
 								</a>
@@ -328,7 +334,7 @@
 									    </select>
 									</div>
 								</div>
-								<a class="advanced-search button is-primary outline" @click="advancedSearchShow().prevent">
+								<a class="advanced-search button is-primary outline" @click="advancedSearchShow()">
 									<i class="fas fa-plus"></i>
 									Busqueda Avanzada
 								</a>
@@ -399,97 +405,29 @@
 					</div>
 					<hr>
 					<div class="products-content" :class="gridOrList2">
-						<a href="#" class="prod-link">
-							<article class="car-prod">
-								<div class="img-prod">
-									<img src="/img/ford-mustang.jpg" alt="Ford Mustang 66">
-								</div>
-								<div class="content-info">
-									<h4 class="prod-title">Ford Mustang 66</h4>
-									<div class="prod-status">
-										<p>2020 / Nuevo / Diesel</p>
+		                <% @cars.each do |car| %>
+		                  <a href="<%= listing_path(car) %>" class="prod-link">
+								<article class="car-prod">
+								
+									<div class="img-prod">
+										<%= image_tag listing_cover(car) %>
 									</div>
-									<p class="price">
-										<span>Venta</span> RD$ 350,000
-									</p>
-									<p v-if="listView">Vendedor: Persona</p>
-									<p v-if="listView">Provincia: La Altagracia</p>
-								</div>
-							</article>
-						</a>
-						<a href="#" class="prod-link">
-							<article class="car-prod">
-								<div class="img-prod">
-									<img src="/img/ford-mustang.jpg" alt="Ford Mustang 66">
-								</div>
-								<div class="content-info">
-									<h4 class="prod-title">Ford Mustang 66</h4>
-									<div class="prod-status">
-										<p>2020 / Nuevo / Diesel</p>
+									<div class="content-info">
+		                                
+										<h4 class="prod-title"><%= car.title %></h4>
+										<div class="prod-status">
+											<p>2020 / Nuevo / Diesel</p>
+										</div>
+										<p class="price">
+											<span>Venta</span> RD$ 350,000
+										</p>
+										<p v-if="listView">Vendedor: Persona</p>
+										<p v-if="listView"> Provincia: <%= car.user.province ? "#{car.user.province}" : "No agregada." %></p>
 									</div>
-									<p class="price">
-										<span>Venta</span> RD$ 350,000
-									</p>
-									<p v-if="listView">Vendedor: Persona</p>
-									<p v-if="listView">Provincia: La Altagracia</p>
-								</div>
-							</article>
-						</a>
-						<a href="#" class="prod-link">
-							<article class="car-prod">
-								<div class="img-prod">
-									<img src="/img/ford-mustang.jpg" alt="Ford Mustang 66">
-								</div>
-								<div class="content-info">
-									<h4 class="prod-title">Ford Mustang 66</h4>
-									<div class="prod-status">
-										<p>2020 / Nuevo / Diesel</p>
-									</div>
-									<p class="price">
-										<span>Venta</span> RD$ 350,000
-									</p>
-									<p v-if="listView">Vendedor: Persona</p>
-									<p v-if="listView">Provincia: La Altagracia</p>
-								</div>
-							</article>
-						</a>
-						<a href="#" class="prod-link">
-							<article class="car-prod">
-								<div class="img-prod">
-									<img src="/img/ford-mustang.jpg" alt="Ford Mustang 66">
-								</div>
-								<div class="content-info">
-									<h4 class="prod-title">Ford Mustang 66</h4>
-									<div class="prod-status">
-										<p>2020 / Nuevo / Diesel</p>
-									</div>
-									<p class="price">
-										<span>Venta</span> RD$ 350,000
-									</p>
-									<p v-if="listView">Vendedor: Persona</p>
-									<p v-if="listView">Provincia: La Altagracia</p>
-								</div>
-							</article>
-						</a>
-						<a href="#" class="prod-link">
-							<article class="car-prod">
-								<div class="img-prod">
-									<img src="/img/ford-mustang.jpg" alt="Ford Mustang 66">
-								</div>
-								<div class="content-info">
-									<h4 class="prod-title">Ford Mustang 66</h4>
-									<div class="prod-status">
-										<p>2020 / Nuevo / Diesel</p>
-									</div>
-									<p class="price">
-										<span>Venta</span> RD$ 350,000
-									</p>
-									<p v-if="listView">Vendedor: Persona</p>
-									<p v-if="listView">Provincia: La Altagracia</p>
-								</div>
-							</article>
-						</a>
-					</div>
+								</article>
+							</a>
+		                <% end %>
+		            </div>
 					<div class="pagination-content">
 						<ul class="pagination-list inner-pagination">
 							<li>
